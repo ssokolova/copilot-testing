@@ -178,7 +178,7 @@ To ensure that the inputs to the `is_prime` function are valid, you
 can add checks at the start of the function.
  Here's how you can do it:
 
-```python
+python
 def is_prime(num):
     if not isinstance(num, int):
         raise TypeError("Input must be an integer")
@@ -191,7 +191,7 @@ def is_prime(num):
         if num % i == 0:
             return False
     return True
-```
+
 
 In this code, the `if` statements will raise a `TypeError` if the
  input is not an integer or a `ValueError` if it's a negative 
