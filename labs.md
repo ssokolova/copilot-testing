@@ -141,6 +141,75 @@ def test_is_prime(number):
 
 **Purpose: In this lab, we'll see how to have Copilot help validate inputs in functions.**
 
+1. Copilot can also help with other kinds of validation besides general test cases. It can also validate that inputs going into a function are valid. Highlight your *is_prime* code and enter the prompt below into the Copilot Chat interface.
+
+```
+generate asserts to ensure that the inputs to the function are valid
+```
+
+2. From here, Copilot should respond and suggest asserts, as requested, to validate the functions inputs. The response may look something like the following (again you do not have to change anything).
+```
+From Coplot:
+
+To ensure that the function inputs are valid, we can add assertions
+at the start of the function. We want to make sure that the input 
+is an integer and that it is not negative. Here's how you can do it:
+
+
+def is_prime(num):
+    assert isinstance(num, int), "Input must be an integer"
+    assert num >= 0, "Input must be a non-negative integer"
+
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+```
+3. We can also be less specific about using asserts and ask Copilot to generate checks. Try this prompt:
+```
+generate checks to ensure that the inputs to the function are valid
+```
+
+4. This should allow Copilot to generate code to validate the inputs, but with a more standard coding mechanism to surface any issues. Here's what example output from that might look like.
+```
+To ensure that the inputs to the `is_prime` function are valid, you
+can add checks at the start of the function.
+ Here's how you can do it:
+
+```python
+def is_prime(num):
+    if not isinstance(num, int):
+        raise TypeError("Input must be an integer")
+    if num < 0:
+        raise ValueError("Input must be a non-negative integer")
+
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+```
+
+In this code, the `if` statements will raise a `TypeError` if the
+ input is not an integer or a `ValueError` if it's a negative 
+number.
+ This way, you can ensure that the inputs to the function are valid.
+```
+
+5. When you're happy with this code, you can go ahead and add them to your code using the options in the code window of the chat.
+
+
+<p align="center">
+**[END OF LAB]**
+</p>
+</br></br>
+
+**Lab 4 - Validating Inputs**
+
+**Purpose: In this lab, we'll see how to have Copilot help validate inputs in functions.**
 
 8. Now, let's introduce an error into the code to see how Copilot can fix it. Pick an instance of a variable name and change it to one that doesn't exist. For example, change an instance of "n" to "x". 
 
