@@ -1,119 +1,148 @@
-# Copilot Deep Dive
-## An introduction to GitHub Copilot
-## Session labs for codespace only
-## Revision 4.1 - 05/30/24
+# Automating Testing with GitHub Copilot
+## Revision 1.0 - 06/08/24
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
 **NOTE: To copy and paste in the codespace, you may need to use keyboard commands - CTRL-C and CTRL-V.**
 
-**Lab 1 - Learning how to create good prompts for Copilot**
+**Lab 1 - High level Copilot Testing Advice**
 
-**Purpose: In this lab, we’ll start to learn about Copilot and how it generates code based on the prompts we provide**
+**Purpose: In this lab, we’ll start to learn about testing with Copilot at a high levele**
 
 1. Create a new file. In the terminal, enter
 
    ```
-   code index.js
+   code prime.py
    ```
 
 2. Afterwards this file should be open in a tab in the editor.
 
-3. Let's see how Copilot responds to a generic request. Go to that tab and type in a comment that says
-
-```
-// function to parse data
-```
-4. Hit return and notice the code that Copilot suggested. This is likely more generic than we want, but hit tab to select that line. (Note that you should give Copilot a second to provide code suggestions before moving on to the next line.)
-   
-5. After hitting tab, Copilot will generate another part of the function. (If not, you may need to hit return.) Hit tab to accept it. Continue until you get a complete function (or Copilot stops generating additional code suggestions). One example of what code may look like is below.
-
-![Copilot generated function](./images/cdd2.png?raw=true "Copilot generated function")
-   
-6. This prompt is not specific enough for Copilot to interpret what we want to do.  Highlight the code and delete it, so we can try again.
-
-7. Now type a comment at the top that says
-
-```
-// function to parse url
-```
-8. Hit enter and you will probably see a similar line to
-
-```
-function parseURL(url) {
-```
-
-9. Just hit Tab to accept it and Enter again. Pause. After that Copilot may or may not offer a suggestion.  If it does, great - you can just hit Tab and accept it.  If not, it may be necessary to further "nudge" Copilot by giving more prompts. Only if you're not getting responses from Copilot, hit return and type the comment below to nudge Copilot.
-
-```
-// parse url
-```
-![nudge comment](./images/cdd3.png?raw=true "nudge comment")   
-
-10. Only if needed, hit return and Copilot should start generating suggestions again. Pause after each return to give Copilot a chance to suggest code. Then you can just hit tab to accept each line and then return to get the next part of the code until the function is complete. You may get some blank lines along the way or for some lines you might need to hit Tab twice to accept the code if it is indented more. But just hit return until you get to the end of a function. (You will be at the end when the indentation is done.  Also Copilot may start to suggest another function in comments like // test...)
-
-11. Suppose you're not happy with that suggestion. Copilot can provide other options for the code. To see those, make sure you are in the editor for the file, then delete all but the first line of the function **and** put the cursor at the end of the first line.
-
-![reset for altenate choices](./images/cdd105.png?raw=true "reset for alternate choices")   
-   
-12. Hit **Ctrl + Enter**. A second window will open up with other suggestions.
-Be patient - it takes a bit of time for Copilot to generate alternative suggestions. After a moment though, you will have up to 10 alternatives to pick from. These will be of varying quality and completeness. You can scan through these and then pick one if suitable by clicking on the **Accept suggestion #** button under the alternative suggestion.  Note that this will add the code to the existing set, so you may need to do some minor editing afterwards.
-
-![alternative suggestions](./images/cdd106.png?raw=true "alternative suggestions")   
-
-13. Let's do one more pass at getting a specific prompt for Copilot. Delete all the code currently in index.js. This time we will not enter a comment, but will enter a specific funtion name.
-Type the following in the empty file. (There are no parentheses after the *splitURLandReturnComponents* text.)  Do not hit tab or return yet.
-
-```
-function splitURLandReturnComponents
-```
-
-14.  With this function name, Copilot should suggest a full function definition - in fact it may suggest several.  To see the options, hover over the first line and a small window should appear. This window will not how many options there are (probably 2 or 3) and provide "<" and ">" links to toggle between them.  Click on the "<" and ">" buttons to see the differences in the available suggestions.
-
-![alternative suggestions inline](./images/cdd5b.png?raw=true "alternative suggestions inline")   
-
-15. When you find an alternative you like, go ahead and tab to select it.
-
- <p align="center">
-**[END OF LAB]**
-</p>
-
-**Lab 2 - Using Copilot to simplify and explain code**
-
-1. Create a new file named prime.py. Create it via the same process as we used in Lab 1 by entering the line below in the terminal.
-
-```
-code prime.py
-```
-
-2. Start typing a function definition as below
+3. Start typing a function definition as below
 ```
 def is_prime(n):
 ```
-3. Leave the cursor at the end of the line.
 
-![starting point](./images/cdd104.png?raw=true "starting point") 
+4. Hit return and notice the code that Copilot suggested. Hit tab to select that line. (Note that you should give Copilot a second to provide code suggestions before moving on to the next line.)
+   
+5. After hitting tab, Copilot will generate another part of the function. (If not, you may need to hit return.) Hit tab to accept it. Continue until you get a complete function (or Copilot stops generating additional code suggestions). One example of what code may look like is below.
 
-4. Hit **Ctrl+Enter** to see options
-
-5. Pick one of the options that is longer and/or more complex (if there is one) and **Accept suggestion #**. If there's not one that's longer/more complex, just pick an alternative one and **Accept suggestion #**.
-
-![alternative suggestions](./images/cdd34b.png?raw=true "alternative suggestions") 
-
-6. Highlight the code and select the Chat extension icon to open the chat window.  Tell Copilot to simplify the code by typing in the chat window.
+![Copilot generated function](./images/ct04.png?raw=true "Copilot generated function")
+   
+6. Now, let's ask Copilot for some general testing advice on your project. Switch to the separate chat area, and ask it:
 ```
-/simplify
+How do I add tests to my project?
+```
+7. Copilot will likely have generated some output with a set of instruction and some example code as shown below.
+![testing suggestions for project](./images/ct05.png?raw=true "testing suggestions for project")
+
+8. Let's also try it with a different kind of file and language. There's a large demo file of SQL statements in this project named *create-tables.sql*. Open that.
+```
+code create-tables.sql
 ```
 
-![simplifying via chat box](./images/cdd35.png?raw=true "simplifying via chat box") 
+9. Since this is a different type of file, we will specify the filename when we ask this time. Enter the following question in the chat interface.
+```
+How do I test the code in #file:create-tables.sql?
+```
 
-7. Hover over the simplified text and tell Copilot to insert the suggestion at the cursor to replace the text that's currently there.
+10. Copilot should again respond with some instructions and suggested examples of how to do the steps.
+![testing suggestions for SQL](./images/ct06.png?raw=true "testing suggestions for sql")   
 
-![replace from chat suggestion](./images/cdd36b.png?raw=true "replace from chat suggestion")    
+
+<p align="center">
+**[END OF LAB]**
+</p>
+</br></br>
+
+**Lab 2 - Using Copilot to create tests**
+
+**Purpose: In this lab, we'll see how to have Copilot create tests for us.**
+
+1. Let's see how to use the shortcut command */tests* to generate some tests. Still working with the same prime.py file, highlight the code and use the *CMD+I* shortcut to bring up the inline chat dialog. In the text entry box for the dialog, enter the */tests* command.
+
+![using the shortcut command to gen tests](./images/ct07.png?raw=true "using the shortcut command to gen tests")
+
+2. After running the command, Copilot generates some basic assert-based tests. The tests may first be shown in a pop up dialog window. You can add them into a separate file by accepting them from the resulting dialog. Or you can use the checkmark control.
+
+![proposed tests from slash command](./images/ct08.png?raw=true "proposed tests from slash command")
+
+3. We can also get the same results from invoking the *Generate Tests* entry from the context menu. Try that now by highlighting the code, right-clicking on it, then selecting *Copilot* and then *Generate Tests*. Go ahead and hit Tab to accept those.
+
+![proposed tests from the menu](./images/ct09.png?raw=true "proposed tests from the menu")
+
+4. Let's see what other suggestions Copilot can come up with for tests. Highlight the new tests and then hit **Ctrl+Enter** to see other possible completion options. 
+
+![scrolling through alternative options](./images/ct10.png?raw=true "scrolling through alternative options") 
+
+5. Pick a different option if you want and **Accept suggestion #**. 
+
+![choosing an alternative suggestion](./images/ct11.png?raw=true "choosing an alternative suggestion") 
+
+6. We can also use comments to have Copilot create tests. Let's try this with the current file. First highlight and delete the current tests that are there.
+![Removing current tests](./images/ct12.png?raw=true "Removing current tests") 
+
+7. Now, under the code, add a comment line that tell Copilot to create tests for the code above.
+```
+# Create tests for the codee above
+```
+
+8. Hit return (if you haven't) and Copilot will probably supply a generic testing routine, such as (you do NOT need to type this in):
+```
+def test_is_prime(number, expected):
+    result = is_prime(number)
+    assert result == expected, f"Expected {expected} but got 
+{result}"
+```
+
+9. Depending on your particular comment and context, Copilot may produce a more generic testing function or a set of individual test cases. To ensure you get the latter, remove the generated code for the testing and the comment and replace it with this comment.
+
+```
+# Create a set of 10 unit tests for the code above
+```
+
+10. In this case, Copilot will usually generate a more explicit set of tests wrapped in a testing function. An example is shown next.
+![test by comment](./images/ct14.png?raw=true "test by comment")    
+
+<p align="center">
+**[END OF LAB]**
+</p>
+</br></br>
+
+**Lab 3 - Generating tests through code suggestions and corrections**
+
+**Purpose: In this lab, we'll see how to have Copilot finish tests for us using code suggestions and corrections.**
+
+1. To get started using this approach, you need to remove the existing testing code (if any, in the prime.py file). Then start typing the start of a testing function, but just the first line.
+```
+def test_is_prime(number):
+```
+
+2. Leaving this as-is causes a wavy line to be added on the next line. This means there's an issue with the code.
+![error in function](./images/ct15.png?raw=true "error in function") 
+
+3. There should be an AI symbol (the two starts) showing up in the listing. Click on that and you should get an option to have Copilot fix the problem.
+![option to fix error](./images/ct16.png?raw=true "option to fix error") 
+
+4. Copilot has likely generated a simple if/else code path to print whether or not the function passed. This is not what we really need, so you can just *Discard* the suggestion. (Or if you've already accepted it, you can just select and erase that code.)
+![error in function](./images/ct17.png?raw=true "error in function") 
+
+5. To get something more direct (like specific use cases), we can add additional tokens and/or keywords to the context. Let's add an *assert* keywork and then let Copilot suggest the remaining part of the test. In the *test_is_prime* function, add an *assert* statement underneath as shown below. Then you can accept the suggestion.
+
+![start with assert](./images/ct18.png?raw=true "start with assert")   
+
+6. From here, you can continue with the Enter/Tab key sequences to get a set of assertion tests.
+
+<p align="center">
+**[END OF LAB]**
+</p>
+</br></br>
+
+**Lab 4 - Validating Inputs**
+
+**Purpose: In this lab, we'll see how to have Copilot help validate inputs in functions.**
+
 
 8. Now, let's introduce an error into the code to see how Copilot can fix it. Pick an instance of a variable name and change it to one that doesn't exist. For example, change an instance of "n" to "x". 
-
-![introduce error](./images/cdd37b.png?raw=true "introduce error")   
 
 9. Notice the light bulb icon that has popped up. Click on that, scroll to the bottom (if needed), and you'll have additional options to fix or explain with Copilot.
 
