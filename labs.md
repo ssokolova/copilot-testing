@@ -266,6 +266,8 @@ Referencing #editor, create a student class with verbose comments.
 ```
 ![run test and see it pass](./images/ct26.png?raw=true "run test and see it pass")
 
+TO-DO: see https://www.it-labs.com/what-is-github-copilot-in-the-test-automation-world/ for more examples.
+
 <p align="center">
 **[END OF LAB]**
 </p>
