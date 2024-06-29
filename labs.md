@@ -1,5 +1,5 @@
 # Automating Testing with GitHub Copilot
-## Revision 1.1 - 06/29/24
+## Revision 1.2 - 06/29/24
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
@@ -11,9 +11,9 @@
 
 1. Create a new file. In the terminal, enter
 
-   ```
-   code prime.py
-   ```
+```
+code prime.py
+```
 
 2. Afterwards this file should be open in a tab in the editor.
 
@@ -22,9 +22,9 @@
 def is_prime(n):
 ```
 
-4. Hit return and notice the code that Copilot suggested. Hit tab to select that line. (Note that you should give Copilot a second to provide code suggestions before moving on to the next line.)
+4. Copilot may suggest code, but if not, hit return and it should start making suggestions. Hit tab to accept the suggestion. (Note that you should give Copilot a second to provide code suggestions before moving on to the next line.)
    
-5. After hitting tab, Copilot will generate another part of the function. (If not, you may need to hit return.) Hit tab to accept it. Continue until you get a complete function (or Copilot stops generating additional code suggestions). One example of what code may look like is below.
+5. After hitting tab, if not complete, Copilot will generate another part of the function. (If not, you may need to hit return.) Hit tab to accept it. Continue until you get a complete function (or Copilot stops generating additional code suggestions). One example of what code may look like is below.
 
 ![Copilot generated function](./images/ct04.png?raw=true "Copilot generated function")
    
