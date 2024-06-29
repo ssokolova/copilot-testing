@@ -222,27 +222,30 @@ add a pom.xml file with a mockito dependency
 (In the separate chat interface)
 Referencing #file:pom.xml, create a StudentTest class for students enrolled at a university and add tests
 ```
-![query to create initial tests](./images/ct20.png?raw=true "query to create initial tests")  
 
-4. The ouptput from this prompt is likely overkill for what we want for a simple test case for a *Student* class. Let's restructure the prompt to ask for something more specific. Enter the following in chat.
+4. The suggested StudentTest class from this prompt is likely overkill for what we want for a simple test case for a *Student* class. However, Copilot will likely detect that we need the Junit dependency at the start of the output. So let's go ahead and add that into our *pom.xml* file. Save the changes to the pom.xml file afterwards.
+
+![add junit dependency](./images/ct30.png?raw=true "add junit dependency")  
+   
+5. Let's restructure the prompt to ask for something more specific for the StudentTest class. Enter the following in chat.
 ```
 (In the separate chat interface)
-Referencing #file:pom.xml, create a StudentTest class for a student
- enrolled at a university. A student will have personal attributes
- such as a first and last name, a phone number, an address, and a
- contact email.
+Referencing #file:pom.xml, create only a StudentTest class for a student enrolled at a university. A student will have personal attributes such as a first and last name, a phone number, an address, and a contact email. The StudentTest class should be part of a com.example package.
 ```
 ![more specific query to create tests](./images/ct21.png?raw=true "more specific query to create tests")  
 
-5. The output from Copilot now likely looks more like what we wanted as a starting point. Click into the output, hover over the top right, and use the icon (or copy and paste) to put it in a different file. Save the file as src/test/StudentTest.java.
-![save new test](./images/ct22.png?raw=true "save new test")
+5. The output from Copilot now likely looks more like what we wanted as a starting point. Click into the output for the *StudentTest* class, hover over the top right, and use the icon (or copy and paste) to put it in a different file. Save the file as **src/test/java/com/example/StudentTest.java**.
+![save new test](./images/ct31.png?raw=true "save new test")
 
-6. Let's now run this test and see it fail. <to do figure out how to run test and see it fail>
-```
-```
-![run test and it fails](./images/ct23.png?raw=true "run test and it fails")
+6. Now, let's execute Maven to try the testing. (Note: We expect it to fail because we don't have the *Student* class implemented yet.)
 
-7. Folllowing the TDD methodology, I should next create the minimum code to make this test pass. We can use Copilot for that. Make sure the new test you just saved is open in the editor, and then use this prompt to create the code.
+```
+mvn test
+```
+![initial test](./images/ct32.png?raw=true "initial test")
+
+
+7. Folllowing the TDD methodology, let's next create the minimum code to make this test pass. We can use Copilot for that. Make sure the new test you just saved is open in the editor, and then use this prompt to create the code.
 ```
 (in the separate Chat interface)
 Referencing #editor, create a student class.
