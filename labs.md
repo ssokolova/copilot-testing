@@ -60,15 +60,15 @@ How do I test the code in #file:create-tables.sql?
 
 1. Let's see how to use the shortcut command */tests* to generate some tests. Still working with the same prime.py file, highlight the code and use the *CMD+I* shortcut to bring up the inline chat dialog. In the text entry box for the dialog, enter the */tests* command.
 
-![using the shortcut command to gen tests](./images/ct07.png?raw=true "using the shortcut command to gen tests")
+![using the shortcut command to gen tests](./images/ct07b.png?raw=true "using the shortcut command to gen tests")
 
 2. After running the command, Copilot generates some basic assert-based tests. The tests may first be shown in a pop up dialog window. You can add them into a separate file by accepting them from the resulting dialog. Or you can use the checkmark control.
 
 ![proposed tests from slash command](./images/ct08.png?raw=true "proposed tests from slash command")
 
-3. We can also get the same results from invoking the *Generate Tests* entry from the context menu. Try that now by highlighting the code, right-clicking on it, then selecting *Copilot* and then *Generate Tests*. Go ahead and hit Tab to accept those.
+3. We can also get the same results from invoking the *Generate Tests* entry from the context menu. Try that now by going back to the *prime.py* file highlighting the code, right-clicking on it, then selecting *Copilot* and then *Generate Tests*. Go ahead and hit Tab to accept those.
 
-![proposed tests from the menu](./images/ct09.png?raw=true "proposed tests from the menu")
+![proposed tests from the menu](./images/ct09b.png?raw=true "proposed tests from the menu")
 
 4. Let's see what other suggestions Copilot can come up with for tests. Highlight the new tests and then hit **Ctrl+Enter** to see other possible completion options. 
 
