@@ -127,12 +127,16 @@ def test_is_prime(number):
 
 6. From here, you can continue with the Enter/Tab key sequences to get a set of assertion tests.
 
-7. While this is an ok set of basic tests, we'd like to ensure better coverage. Let's ask Copilot about any other edge cases. Enter the prompt below into the chat window.
+7. While this is an ok set of basic tests, we'd like to ensure better coverage. Let's ask Copilot about any other edge cases. Enter the prompt below into the chat window. Copilot should respond with an explanation of different edge cases and sample code for the tests.
 ```
 are there any other edge cases that should be tested?
 ```
+![edge cases generation](./images/ct38.png?raw=true "edge cases generation")   
 
-8. When Copilot generates the output, hover over it, copy it, and add it into the testing file.
+8. We can now copy the example test cases and add them to our testing file via the usual chat methods. (Hover over output, copy it, and paste/insert into the testing file we previously created).
+
+![edge cases insert](./images/ct39.png?raw=true "edge cases insert")   
+
 
 <p align="center">
 **[END OF LAB]**
@@ -150,6 +154,8 @@ generate asserts to ensure that the inputs to the function are valid
 ```
 
 2. From here, Copilot should respond and suggest asserts, as requested, to validate the functions inputs. The response may look something like the following (again you do not have to change anything).
+
+![validating inputs with asserts](./images/ct40.png?raw=true "validating inputs with asserts")   
 ```
 (From Copilot:)
 
@@ -175,6 +181,8 @@ generate checks to ensure that the inputs to the function are valid
 ```
 
 4. This should allow Copilot to generate code to validate the inputs, but with a more standard coding mechanism to surface any issues. Here's what example output from that might look like.
+
+![validating inputs with checks](./images/ct41.png?raw=true "validating inputs with checks")  
 ```
 To ensure that the inputs to the `is_prime` function are valid, you
 can add checks at the start of the function.
@@ -202,6 +210,7 @@ number.
 ```
 
 5. When you're happy with this code, you can go ahead and add them to your code using the options in the code window of the chat.
+![validating inputs with checks](./images/ct42.png?raw=true "validating inputs with checks")  
 
 6. While we are discussing inputs, we should also consider other types of inputs to test for. Switch back to the file with the test cases and have it open in the editor. Now let's prompt Copilot to look at these and consider any other types of inputs. Enter ther following prompt:
 ```
@@ -209,6 +218,7 @@ Referencing #editor, add test cases for other types of inputs
 ```
 
 7. With this prompt, Copilot will likely add some additional test cases like these.
+   
 ```
     def test_float_input(self):
         with self.assertRaises(TypeError):
@@ -220,6 +230,7 @@ Referencing #editor, add test cases for other types of inputs
 ```
 
 8. Go ahead and hover over the output and add them to the file with the test cases.
+![adding test cases for different input types](./images/ct43.png?raw=true "adding test cases for different input types")  
 
 <p align="center">
 **[END OF LAB]**
