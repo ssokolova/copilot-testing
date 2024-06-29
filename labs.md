@@ -62,31 +62,26 @@ How do I test the code in #file:create-tables.sql?
 
 ![using the shortcut command to gen tests](./images/ct07b.png?raw=true "using the shortcut command to gen tests")
 
-2. After running the command, Copilot generates some basic assert-based tests. The tests may first be shown in a pop up dialog window. You can add them into a separate file by accepting them from the resulting dialog. Or you can use the checkmark control.
+2. After running the command, Copilot generates some basic assert-based tests. The tests may first be shown in a pop up dialog window. You can add them into a separate file by accepting them using the the checkmark control in the upper right of the dialog.
 
 ![proposed tests from slash command](./images/ct08.png?raw=true "proposed tests from slash command")
 
-3. We can also get the same results from invoking the *Generate Tests* entry from the context menu. Try that now by going back to the *prime.py* file highlighting the code, right-clicking on it, then selecting *Copilot* and then *Generate Tests*. Go ahead and hit Tab to accept those.
+3. We can also get the same results from invoking the *Generate Tests* entry from the context menu. Try that now by going back to the *prime.py* file highlighting the code, right-clicking on it, then selecting *Copilot* and then *Generate Tests*. Since we already have tests generated from the other command, you can just close this dialog.
 
 ![proposed tests from the menu](./images/ct09b.png?raw=true "proposed tests from the menu")
 
-4. Let's see what other suggestions Copilot can come up with for tests. Highlight the new tests and then hit **Ctrl+Enter** to see other possible completion options. 
+4. Let's see what other suggestions Copilot can come up with for tests. In the new file that was created, highlight the tests and then hit **Ctrl+Enter** to see other possible completion options. 
 
 ![scrolling through alternative options](./images/ct10.png?raw=true "scrolling through alternative options") 
 
-5. Pick a different option if you want and **Accept suggestion #**. 
+5. It is doubtful that Copilot will produce an alternative that is better than what you have, but if you want, you can pick a different option by clicking on the **Accept suggestion #** button under the suggestion. 
 
-![choosing an alternative suggestion](./images/ct11.png?raw=true "choosing an alternative suggestion") 
-
-6. We can also use comments to have Copilot create tests. Let's try this with the current file. First highlight and delete the current tests that are there.
-![Removing current tests](./images/ct12.png?raw=true "Removing current tests") 
-
-7. Now, under the code, add a comment line that tell Copilot to create tests for the code above.
+6. We can also use comments to have Copilot create tests. Let's try this in the original *prime.py* file. Under the code, add a comment line that tell Copilot to create tests for the code above.
 ```
-# Create tests for the codee above
+# Create tests for the code above
 ```
 
-8. Hit return (if you haven't) and Copilot will probably supply a generic testing routine, such as (you do NOT need to type this in):
+7. Hit return (if you haven't) and Copilot will probably supply a generic testing routine, such as below (NOTE: if you only get the first line, you may need to "nudge" Copilot by typing "result" or similar after accepting the first line):
 ```
 def test_is_prime(number, expected):
     result = is_prime(number)
@@ -94,13 +89,13 @@ def test_is_prime(number, expected):
 {result}"
 ```
 
-9. Depending on your particular comment and context, Copilot may produce a more generic testing function or a set of individual test cases. To ensure you get the latter, remove the generated code for the testing and the comment and replace it with this comment.
+8. Depending on your particular comment and context, Copilot may produce a more generic testing function or a set of individual test cases. To ensure you get the latter,  delete the generated code from the previous comment and redo the steps with this comment. (You may need to hit return again and give Copilot a few seconds to generate the tests.)
 
 ```
 # Create a set of 10 unit tests for the code above
 ```
 
-10. In this case, Copilot will usually generate a more explicit set of tests wrapped in a testing function. An example is shown next.
+9. In this case, Copilot will usually generate a more explicit set of tests wrapped in a testing function. An example is shown next.
 ![test by comment](./images/ct14.png?raw=true "test by comment")    
 
 <p align="center">
