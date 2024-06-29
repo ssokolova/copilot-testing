@@ -127,6 +127,13 @@ def test_is_prime(number):
 
 6. From here, you can continue with the Enter/Tab key sequences to get a set of assertion tests.
 
+7. While this is an ok set of basic tests, we'd like to ensure better coverage. Let's ask Copilot about any other edge cases. Enter the prompt below into the chat window.
+```
+are there any other edge cases that should be tested?
+```
+
+8. When Copilot generates the output, hover over it, copy it, and add it into the testing file.
+
 <p align="center">
 **[END OF LAB]**
 </p>
@@ -196,6 +203,23 @@ number.
 
 5. When you're happy with this code, you can go ahead and add them to your code using the options in the code window of the chat.
 
+6. While we are discussing inputs, we should also consider other types of inputs to test for. Switch back to the file with the test cases and have it open in the editor. Now let's prompt Copilot to look at these and consider any other types of inputs. Enter ther following prompt:
+```
+Referencing #editor, add test cases for other types of inputs
+```
+
+7. With this prompt, Copilot will likely add some additional test cases like these.
+```
+    def test_float_input(self):
+        with self.assertRaises(TypeError):
+            is_prime(7.1)
+
+    def test_string_input(self):
+        with self.assertRaises(TypeError):
+            is_prime("7")
+```
+
+8. Go ahead and hover over the output and add them to the file with the test cases.
 
 <p align="center">
 **[END OF LAB]**
