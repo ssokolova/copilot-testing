@@ -1,5 +1,5 @@
 # Automating Testing with GitHub Copilot
-## Revision 1.0 - 06/08/24
+## Revision 1.1 - 06/29/24
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
