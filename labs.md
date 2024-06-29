@@ -208,13 +208,13 @@ number.
 
 1. Let's look at a TDD approach of creating the test cases with a failing test and then immplementing the code to be tested. Consider a simple example where we want to create a test class and tests for students at a university. We'll use Mockito as our testing framework. Let's have Copilot create a pom.xml file for us with a mockito dependency. In the separate chat interface, enter the following prompt:
 ```
-add a pom.xml file with a mockito dependency
+add a pom.xml file with a mockito dependency, and compiler source and target version 1.8
 ```
-![add pom with mockito dependency](./images/ct27.png?raw=true "add pom with mockito dependency")  
+![add pom with mockito dependency](./images/ct33.png?raw=true "add pom with mockito dependency")  
 
 2. Now, let's put the generated content into a new file in our project. Hover over the generated code, select the *... (More actions)* at the end and then click on *Insert into New File*. Then save the file as *pom.xml* via the *3 bar* menu in the upper left, then *File*, then *Save As..*. 
 
-![insert into new file](./images/ct28.png?raw=true "insert into new file")  
+![insert into new file](./images/ct34.png?raw=true "insert into new file")  
 ![save file](./images/ct29.png?raw=true "save file") 
 
 3. Now, let's create an appropriate test class and initial set of tests. Do this in the Copilot separate Chat interface, since we expect a significant amount of output and we may want to put it in a separate file. We'll use a prompt that tells Copilot to focus on the *pom.xml* file we just created.
@@ -245,24 +245,21 @@ mvn test
 ![initial test](./images/ct32.png?raw=true "initial test")
 
 
-7. Folllowing the TDD methodology, let's next create the minimum code to make this test pass. We can use Copilot for that. Make sure the new test you just saved is open in the editor, and then use this prompt to create the code.
-```
-(in the separate Chat interface)
-Referencing #editor, create a student class.
-```
-![output of query to create student class](./images/ct24.png?raw=true "output of query to create student class")
-
-8. This is a good start for the code to save and run our test case against. But let's go ahead and make sure it's well-commented.
+7. Folllowing the TDD methodology, let's next create the minimum code to make this test pass. We can use Copilot for that. Make sure the *StudentTest.java* file is open in the editor, and then use this prompt to create the code.
 ```
 (in the separate Chat interface)
 Referencing #editor, create a student class with verbose comments.
 ```
-![output of query to create student class with comments](./images/ct25.png?raw=true "output of query to create student class with comments")
+![output of query to create student class with comments](./images/ct35.png?raw=true "output of query to create student class with comments")
 
-9. Finally, let's run the test again and it should pass. <to do - figure out how to run the test and see it pass>
+8. As we did before, hover over the output, insert the code into a new file. Then save it as **src/main/java/com/example/Student.java**
+
+![saving student file](./images/ct36.png?raw=true "saving student file")
+
+10. Finally, let's run the test again and it should pass. 
 ```
 ```
-![run test and see it pass](./images/ct26.png?raw=true "run test and see it pass")
+![run test and see it pass](./images/ct37.png?raw=true "run test and see it pass")
 
 TO-DO: see https://www.it-labs.com/what-is-github-copilot-in-the-test-automation-world/ for more examples.
 
