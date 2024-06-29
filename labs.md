@@ -107,21 +107,21 @@ def test_is_prime(number, expected):
 
 **Purpose: In this lab, we'll see how to have Copilot finish tests for us using code suggestions and corrections.**
 
-1. To get started using this approach, you need to remove the existing testing code (if any, in the prime.py file). Then start typing the start of a testing function, but just the first line.
+1. To get started using this approach, you need to remove the existing testing code (if any, in the prime.py file) and delete all blank lines under it. Then start typing the start of a testing function, but just the first line.
 ```
 def test_is_prime(number):
 ```
 
-2. Leaving this as-is causes a wavy line to be added on the next line. This means there's an issue with the code.
+2. Copilot may show a suggestion for completion, but we'll ignore that for now. Click in a different window outside of the file editor.  There should be a red wavy line showing on the last line of the file. This means there's an issue with the code.
 ![error in function](./images/ct15.png?raw=true "error in function") 
 
-3. There should be an AI symbol (the two starts) showing up in the listing. Click on that and you should get an option to have Copilot fix the problem.
+3. There should be an AI symbol (the two stars) showing up in the listing. Click on that and you should get an option to have Copilot fix the problem.
 ![option to fix error](./images/ct16.png?raw=true "option to fix error") 
 
-4. Copilot has likely generated a simple if/else code path to print whether or not the function passed. This is not what we really need, so you can just *Discard* the suggestion. (Or if you've already accepted it, you can just select and erase that code.)
+5. Copilot has likely generated a simple if/else code path to print whether or not the function passed. This is not what we really need, so you can just *Discard* the suggestion. (Or if you've already accepted it, you can just select and erase that code.)
 ![error in function](./images/ct17.png?raw=true "error in function") 
 
-5. To get something more direct (like specific use cases), we can add additional tokens and/or keywords to the context. Let's add an *assert* keywork and then let Copilot suggest the remaining part of the test. In the *test_is_prime* function, add an *assert* statement underneath as shown below. Then you can accept the suggestion.
+6. To get something more direct (like specific use cases), we can add additional tokens and/or keywords to the context. Let's add an *assert* keywork and then let Copilot suggest the remaining part of the test. In the *test_is_prime* function, add an *assert* statement underneath as shown below. Then you can accept the suggestion.
 
 ![start with assert](./images/ct18.png?raw=true "start with assert")   
 
