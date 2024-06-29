@@ -206,16 +206,16 @@ number.
 
 **Purpose: In this lab, we'll see how to leverage Copilot with testing frameworks and how to do Test-Driven Development with it.**
 
-1. Let's look at a TDD approach of creating the test cases with a failing test and then immplementing the code to be tested. Consider a simple example where we want to create a test class and tests for students at a university. We'll use Mockito as our testing framework. Create a pom.xml file.
+1. Let's look at a TDD approach of creating the test cases with a failing test and then immplementing the code to be tested. Consider a simple example where we want to create a test class and tests for students at a university. We'll use Mockito as our testing framework. Let's have Copilot create a pom.xml file for us with a mockito dependency. In the separate chat interface, enter the following prompt:
 ```
-code pom.xml
+add a pom.xml file with a mockito dependency
 ```
+![add pom with mockito dependency](./images/ct27.png?raw=true "add pom with mockito dependency")  
 
-2. Use the inline Chat interface (bring up the dialog with CMD+I) and ask Copilot to add a mockito dependency.
-```
-(in dialog) add mockito dependency
-```
-![add mockito dependency](./images/ct19.png?raw=true "add mockito dependency")  
+2. Now, let's put the generated content into a new file in our project. Hover over the generated code, select the *... (More actions)* at the end and then click on *Insert into New File*. Then save the file as *pom.xml* via the *3 bar* menu in the upper left, then *File*, then *Save As..*. 
+
+![insert into new file](./images/ct28.png?raw=true "insert into new file")  
+![save file](./images/ct29.png?raw=true "save file") 
 
 3. Now, let's create an appropriate test class and initial set of tests. Do this in the Copilot separate Chat interface, since we expect a significant amount of output and we may want to put it in a separate file. We'll use a prompt that tells Copilot to focus on the *pom.xml* file we just created.
 ```
