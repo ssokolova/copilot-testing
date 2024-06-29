@@ -6,8 +6,11 @@
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
-		"ghcr.io/devcontainers/features/github-cli:1": {}
-	},
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+                "ghcr.io/devcontainers/features/java:1": {
+		   "installMaven": "true"    
+	         }
+        },
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
