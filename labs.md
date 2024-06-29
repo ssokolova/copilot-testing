@@ -234,10 +234,10 @@ Referencing #file:pom.xml, create only a StudentTest class for a student enrolle
 ```
 ![more specific query to create tests](./images/ct21.png?raw=true "more specific query to create tests")  
 
-5. The output from Copilot now likely looks more like what we wanted as a starting point. Click into the output for the *StudentTest* class, hover over the top right, and use the icon (or copy and paste) to put it in a different file. Save the file as **src/test/java/com/example/StudentTest.java**.
+6. The output from Copilot now likely looks more like what we wanted as a starting point. Click into the output for the *StudentTest* class, hover over the top right, and use the icon (or copy and paste) to put it in a different file. Save the file as **src/test/java/com/example/StudentTest.java**.
 ![save new test](./images/ct31.png?raw=true "save new test")
 
-6. Now, let's execute Maven to try the testing. (Note: We expect it to fail because we don't have the *Student* class implemented yet.)
+7. Now, let's execute Maven to try the testing. (Note: We expect it to fail because we don't have the *Student* class implemented yet.)
 
 ```
 mvn test
@@ -245,19 +245,20 @@ mvn test
 ![initial test](./images/ct32.png?raw=true "initial test")
 
 
-7. Folllowing the TDD methodology, let's next create the minimum code to make this test pass. We can use Copilot for that. Make sure the *StudentTest.java* file is open in the editor, and then use this prompt to create the code.
+8. Folllowing the TDD methodology, let's next create the minimum code to make this test pass. We can use Copilot for that. Make sure the *StudentTest.java* file is open in the editor, and then use this prompt to create the code.
 ```
 (in the separate Chat interface)
 Referencing #editor, create a student class with verbose comments.
 ```
 ![output of query to create student class with comments](./images/ct35.png?raw=true "output of query to create student class with comments")
 
-8. As we did before, hover over the output, insert the code into a new file. Then save it as **src/main/java/com/example/Student.java**
+9. As we did before, hover over the output, insert the code into a new file. Then save it as **src/main/java/com/example/Student.java**
 
 ![saving student file](./images/ct36.png?raw=true "saving student file")
 
 10. Finally, let's run the test again and it should pass. 
 ```
+mvn test
 ```
 ![run test and see it pass](./images/ct37.png?raw=true "run test and see it pass")
 
