@@ -41,7 +41,7 @@ Then click on the option to create a new codespace.
 
 After the codespace has started, open the labs document by going to the file tree on the left, find the file named **labs.md**, right-click on it, and open it with the **Preview** option.)
 
-![Labs doc preview in codespace](./images/ct02.png?raw=true "Labs doc preview in codespace")
+![Labs doc preview in codespace](./images/ct12.png?raw=true "Labs doc preview in codespace")
 
 This will open it up in a tab above your terminal. Then you can follow along with the steps in the labs. 
 Any command in the gray boxes is either code intended to be run in the console or code to be updated in a file.
