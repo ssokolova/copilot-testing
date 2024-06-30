@@ -137,7 +137,7 @@ are there any other edge cases that should be tested?
 
 ![edge cases insert](./images/ct39.png?raw=true "edge cases insert")   
 
-
+9. Let's go ahead and have Copilot document our test cases here. Highlight the test cases and then, using the Cmd+I dialog, enter the shortcut command */doc*. You can accept the suggested documentation if you're happy with it.
 <p align="center">
 **[END OF LAB]**
 </p>
