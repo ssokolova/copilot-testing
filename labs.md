@@ -297,7 +297,6 @@ mvn test
 ```
 ![run test and see it pass](./images/ct37.png?raw=true "run test and see it pass")
 
-TO-DO: see https://www.it-labs.com/what-is-github-copilot-in-the-test-automation-world/ for more examples.
 
 <p align="center">
 **[END OF LAB]**
