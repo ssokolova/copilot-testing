@@ -70,9 +70,21 @@ code create-tables.sql
 6. In the chat interface, you can scan through the output if you want, but you don't have to. It is interesting to go back up to the top of the output, and expand the "Used ## references" section to see the references that Copilot used in providing the explanation.
 ![view in chat](./images/ct53.png?raw=true "view in chat")
 
-7. in chat - enter @workspace /explain  #file:test_webscraper.py, select section from popup
+7. While we're at it, let's have Copilot explain how the testing file it created for us works. In the chat interface - enter *@workspace /explain # and pause. There should then be a popup, where you can select the *#file* entry.
+```
+@workspace /explain #
+```
+![selecting file](./images/ct54.png?raw=true "selecting file")
 
-8. Then, have them doc test_webscraper.py to finish lab
+8. After you selecting the *#file* selector, you should get a popup near the center top of the codespace interface. This will let you select the *test_webscraper.py* file. Select that file.
+![selecting file](./images/ct55.png?raw=true "selecting file")
+
+9. You'll then have a highlighted command to explain the file. Hit Enter for that. You may then have another popup to select the range of the testing file to explain. If so, you can just select the *TestWebScraper* entry.
+ ![full entry](./images/ct57.png?raw=true "full entry")
+ ![full entry](./images/ct56.png?raw=true "full entry")  
+
+10. After executing this, you'll likely see some updated code suggestions, but you can scroll down further to see the *Explanation* section.
+ ![explanation](./images/ct58.png?raw=true "explanation") 
 
 <p align="center">
 **[END OF LAB]**
