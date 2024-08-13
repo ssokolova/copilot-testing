@@ -9,45 +9,70 @@
 
 **Purpose: In this lab, we’ll start to learn about testing with Copilot at a high levele**
 
-1. Create a new file. In the terminal, enter
+1. In our repository, there is an example Python file we'll be using to start with. You can open it by clicking on [**webscraper.py**](./webscaper.py) , or, in the terminal, enter
 
 ```
-code prime.py
+code webscraper.py
+```
+ 
+2. Let's ask Copilot for some general testing advice for this code. Switch to the separate chat area, and ask it:
+```
+How can I test #file:webscraper.py?
 ```
 
-2. Afterwards this file should be open in a tab in the editor.
+3. Copilot will likely have generated some output with a set of instruction and some example code similar to what's shown below. Notice that it brings in unit testing and mocking frameworks.
+![testing suggestions for file](./images/ct45.png?raw=true "testing suggestions for file")
 
-3. Start typing a function definition as below
-```
-def is_prime(n):
-```
+4. Let's take the generated code and put it into a new file. Howver over the code section, and click on the 3 dots at the end of the popup bar.
+![hover](./images/ct46.png?raw=true "hover")
 
-4. Copilot may suggest code, but if not, hit return and it should start making suggestions. Hit tab to accept the suggestion. (Note that you should give Copilot a second to provide code suggestions before moving on to the next line.)
-   
-5. After hitting tab, if not complete, Copilot will generate another part of the function. (If not, you may need to hit return.) Hit tab to accept it. Continue until you get a complete function (or Copilot stops generating additional code suggestions). One example of what code may look like is below.
+5. From the menu that pops up, select the *Insert into New File* option and insert the code into a new file in the project.
+![insert into new file](./images/ct47.png?raw=true "insert into new file")
 
-![Copilot generated function](./images/ct04.png?raw=true "Copilot generated function")
-   
-6. Now, let's ask Copilot for some general testing advice on your project. Switch to the separate chat area, and ask it:
-```
-How do I add tests to my project?
-```
-7. Copilot will likely have generated some output with a set of instruction and some example code as shown below.
-![testing suggestions for project](./images/ct05.png?raw=true "testing suggestions for project")
+6. Now, select the file, and save it. You can use the 3 bar menu on the left, then File->Save and save it as "test_webscraper.py".
+![saving as new file](./images/ct47.png?raw=true "saving as new file")
 
-8. Let's also try it with a different kind of file and language. There's a large demo file of SQL statements in this project named *create-tables.sql*. Open that.
+7. Let's also look at how we can add code coverage information for the file. Select the *webscraper.py* file in the editor. Then, we'll just use the shortcut CMD/CTRL+I to bring up the chat dialog and type our question in there.
+```
+How can I measure code coverage on this file?
+```
+![query on code coverage](./images/ct48.png?raw=true "query on code coverage")
+
+8. Hit *Enter* and you should see some suggested changes that you can Accept or Reject. You can just go ahead and Accept them for this case.
+![query on code coverage](./images/ct49.png?raw=true "query on code coverage")
+
+9. Save any changes to your files.
+
+**Lab 2 - Using other Copilot features to help with testing**
+
+**Purpose: In this lab, we'll see how to leverage some of Copilot's other features to help with testing**
+
+1. First, let's try out the Copilot */tests* shortcut command.  Let's also try it with a different kind of file and language. There's a large demo file of SQL statements in this project named *create-tables.sql*. Open that.
 ```
 code create-tables.sql
 ```
 
-9. Since this is a different type of file, we will specify the filename when we ask this time. Enter the following question in the chat interface.
+2. Since this is a different type of file, we will specify the filename when we ask Copilot to generate tests this time. Enter the following question in the chat interface. (It will automatically add an *@workspace* participant at the start, but that's ok.)
 ```
-How do I test the code in #file:create-tables.sql?
+/tests #file:create-tables.sql?
 ```
+![using /tests command](./images/ct50.png?raw=true "using /tests command")
 
-10. Copilot should again respond with some instructions and suggested examples of how to do the steps.
+3. Copilot should respond with some overall instructions/plan and suggested examples of how to do the steps. You can just review these to see the example, you don't need to do anything with them.
 ![testing suggestions for SQL](./images/ct06.png?raw=true "testing suggestions for sql")   
 
+4. Suppose we need to better understand the code we're testing. We can have Copilot explain the code to us. Highlight all of the code in the file *webscraper.py* and then use the CMD/CTRL+I shortcut to bring up the chat dialog window and type in */explain*.
+![explain webscraper.py](./images/ct51.png?raw=true "explain webscraper.py")   
+
+5. This will dump a lot of output in the dialog. To better review it, click on the *View in Chat* button to put it in the main Chat interface.
+![view in chat](./images/ct52.png?raw=true "view in chat")   
+
+6. In the chat interface, you can scan through the output if you want, but you don't have to. It is interesting to go back up to the top of the output, and expand the "Used ## references" section to see the references that Copilot used in providing the explanation.
+![view in chat](./images/ct53.png?raw=true "view in chat")
+
+7. in chat - enter @workspace /explain  #file:test_webscraper.py, select section from popup
+
+8. Then, have them doc test_webscraper.py to finish lab
 
 <p align="center">
 **[END OF LAB]**
