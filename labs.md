@@ -95,19 +95,20 @@ How can I test #file:webscraper.py?
 
 ![saving as new file](./images/ct75.png?raw=true "saving as new file")
 
-7. Let's also look at how we can add code coverage information for the file. Select the *webscraper.py* file in the editor. Then, we'll just use the shortcut CMD/CTRL+I to bring up the chat dialog and type our question in there.
+7. Let's also look at how we can add code coverage information for the file. Select the *webscraper.py* file in the editor. Then, switch to the separate chat dialog and type the question in there. After you hit Enter, you should see some info from Copilot on how to do coverage.
 
 ```
 How can I measure code coverage on this file?
 ```
 
-![query on code coverage](./images/ct48.png?raw=true "query on code coverage")
+![query on code coverage](./images/ct76.png?raw=true "query on code coverage")
 
-8. Hit *Enter* and you should see some suggested changes that you can Accept or Reject. You can just go ahead and Accept them for this case.
+8. Near the bottom of this output, you may see some *Example Commands in Sequence*. If so, hover over them and click the icon that looks like a terminal to send these commands directly to the terminal.
 
-![query on code coverage](./images/ct49.png?raw=true "query on code coverage")
+![query on code coverage](./images/ct77.png?raw=true "query on code coverage")
 
-9. Save any changes to your files.
+9. When you click on that terminal icon, it should populate the terminal with those commands and you can run them. While there will be coverage numbers generated, they will not be accurate or complete, because our code doesn't currently run.
+![coverage results](./images/ct78.png?raw=true "coverage results")
     
 <p align="center">
 **[END OF LAB]**
