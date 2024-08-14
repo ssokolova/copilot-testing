@@ -21,7 +21,7 @@ code prime.py
 
 3. After running the command, Copilot generates some basic assert-based tests. The tests may first be shown in a pop up dialog window. You can add them into a separate file by accepting them using the the checkmark control in the upper right of the dialog.
 
-![proposed tests into new file](./images/ct72.png?raw=true "proposed tests into new file")
+![proposed tests into new file](./images/ct70.png?raw=true "proposed tests into new file")
 
 4. Now let's save this new file as *test_prime.py*. With the new file with the test cases selected in the editor, click on the *3-bar* menu in the upper left corner of the codespace, then click *File*, then *Save*, then save the file as *test_prime.py*.
    
