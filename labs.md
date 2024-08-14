@@ -93,7 +93,7 @@ How can I test #file:webscraper.py?
 
 6. Now, select the file, and save it. You can use the 3 bar menu on the left, then File->Save and save it as "test_webscraper.py".
 
-![saving as new file](./images/ct47.png?raw=true "saving as new file")
+![saving as new file](./images/ct75.png?raw=true "saving as new file")
 
 7. Let's also look at how we can add code coverage information for the file. Select the *webscraper.py* file in the editor. Then, we'll just use the shortcut CMD/CTRL+I to bring up the chat dialog and type our question in there.
 
