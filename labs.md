@@ -120,7 +120,7 @@ How can I measure code coverage on this file?
 
 **Purpose: In this lab, we'll see how to leverage some of Copilot's other features to help with testing**
 
-1. First, let's try out the Copilot */tests* shortcut command with a different kind of file and language. There's a large demo file of SQL statements in this project named *create-tables.sql*. Open that.
+1. First, let's try out the Copilot */tests* shortcut command with a different kind of file and language. There's a large demo file of SQL statements in this project named [**create-tables.sql**](./create-tables.sql). Open that.
 
 ```
 code create-tables.sql
