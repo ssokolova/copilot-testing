@@ -126,13 +126,11 @@ How can I measure code coverage on this file?
 code create-tables.sql
 ```
 
-2. Since this is a different type of file, we will specify the filename when we ask Copilot to generate tests this time. Enter the following question in the chat interface. (It will automatically add an *@workspace* participant at the start, but that's ok.)
+2. Since this is a different type of file, we will specify the filename when we ask Copilot to generate tests this time. Enter the following question in the chat interface. It will automatically add an *@workspace* participant at the start - delete the "@workspace" part.
 
 ```
-/tests #file:create-tables.sql?
+/tests #file:create-tables.sql
 ```
-
-![using /tests command](./images/ct50.png?raw=true "using /tests command")
 
 3. Copilot should respond with some overall instructions/plan and suggested examples of how to do the steps. You can just review these to see the example, you don't need to do anything with them.
 
@@ -150,7 +148,7 @@ code create-tables.sql
 
 ![view in chat](./images/ct53.png?raw=true "view in chat")
 
-7. While we're at it, let's have Copilot explain how the testing file it created for us works. In the chat interface - enter *@workspace /explain # and pause. There should then be a popup, where you can select the *#file* entry.
+7. While we're at it, let's have Copilot explain how the testing file it created for us works. In the chat interface - enter *@workspace /explain # and pause. There should then be a popup, where you can select the *#file* entry. (You may have to use the arrow keys to select it.)
 
 ```
 @workspace /explain #
@@ -168,7 +166,7 @@ code create-tables.sql
  
  ![full entry](./images/ct56.png?raw=true "full entry")  
 
-10. After executing this, you'll likely see some updated code suggestions, but you can scroll down further to see the *Explanation* section.
+10. After executing this, you'll likely see some updated code suggestions, but you can scan through to see the sections with explanations.
 
  ![explanation](./images/ct58.png?raw=true "explanation") 
 
