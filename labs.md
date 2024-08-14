@@ -21,18 +21,19 @@ code prime.py
 
 3. After running the command, Copilot generates some basic assert-based tests. The tests may first be shown in a pop up dialog window. You can add them into a separate file by accepting them using the the checkmark control in the upper right of the dialog.
 
-![proposed tests from slash command](./images/ct08.png?raw=true "proposed tests from slash command")
+![proposed tests into new file](./images/ct72.png?raw=true "proposed tests into new file")
 
-4. We can also get the same results from invoking the *Generate Tests* entry from the context menu. Try that now by going back to the *prime.py* file highlighting the code, right-clicking on it, then selecting *Copilot* and then *Generate Tests*. Since we already have tests generated from the other command, you can just close this dialog.
-
+4. Now let's save this new file as *test_prime.py*. With the new file with the test cases selected in the editor, click on the *3-bar* menu in the upper left corner of the codespace, then click *File*, then *Save*, then save the file as *test_prime.py*.
+![saving file](./images/ct71.png?raw=true "saving files")
+   
+5. We can also get the same results from invoking the *Generate Tests* entry from the context menu. Try that now by going back to the *prime.py* file highlighting the code, right-clicking on it, then selecting *Copilot* and then *Generate Tests*. Since we already have tests generated from the other command, you can just close this dialog.
 ![proposed tests from the menu](./images/ct09b.png?raw=true "proposed tests from the menu")
 
-5. We can also use comments to have Copilot create tests. Let's try this in the original *prime.py* file. Under the code, add a comment line that tell Copilot to create tests for the code above.
+6. We can also use comments to have Copilot create tests. Let's try this in the original *prime.py* file. Under the code, add a comment line that tell Copilot to create tests for the code above.
 ```
 # Create tests for the code above
 ```
-
-6. Hit return (if you haven't) and Copilot will probably supply a generic testing routine, such as below (NOTE: if you only get the first line, you may need to "nudge" Copilot by typing "result" or similar after accepting the first line):
+7. Hit return (if you haven't) and Copilot will probably supply a generic testing routine, such as below (NOTE: if you only get the first line, you may need to "nudge" Copilot by typing "result" or similar after accepting the first line):
 ```
 def test_is_prime(number, expected):
     result = is_prime(number)
@@ -40,13 +41,13 @@ def test_is_prime(number, expected):
 {result}"
 ```
 
-7. Depending on your particular comment and context, Copilot may produce a more generic testing function or a set of individual test cases. To ensure you get the latter,  delete the generated code from the previous comment and redo the steps with this comment. (You may need to hit return again and give Copilot a few seconds to generate the tests.)
+8. Depending on your particular comment and context, Copilot may produce a more generic testing function or a set of individual test cases. To ensure you get the latter,  delete the generated code from the previous comment and redo the steps with this comment. (You may need to hit return again and give Copilot a few seconds to generate the tests.)
 
 ```
 # Create a set of 10 unit tests for the code above
 ```
 
-8. In this case, Copilot will usually generate a more explicit set of tests wrapped in a testing function. An example is shown next.
+9. In this case, Copilot will usually generate a more explicit set of tests wrapped in a testing function. An example is shown next.
 ![test by comment](./images/ct14.png?raw=true "test by comment")    
 
 <p align="center">
@@ -180,45 +181,17 @@ code create-tables.sql
 
 9. You can then paste this into a text file, save it as .md (markdown) format and then view it in a markdown viewer or convert it.
 ![copy markdown](./images/ct69.png?raw=true "copy markdown")
-10. 
 
-2. Copilot may show a suggestion for completion, but we'll ignore that for now. Click in a different window outside of the file editor.  There should be a red wavy line showing on the last line of the file. This means there's an issue with the code.
-![error in function](./images/ct15.png?raw=true "error in function") 
-
-3. There should be an AI symbol (the two stars) showing up in the listing. Click on that and you should get an option to have Copilot fix the problem.
-![option to fix error](./images/ct16.png?raw=true "option to fix error") 
-
-5. Copilot has likely generated a simple if/else code path to print whether or not the function passed. This is not what we really need, so you can just *Discard* the suggestion. (Or if you've already accepted it, you can just select and erase that code.)
-![error in function](./images/ct17.png?raw=true "error in function") 
-
-6. To get something more direct (like specific use cases), we can add additional tokens and/or keywords to the context. Let's add an *assert* keywork and then let Copilot suggest the remaining part of the test. In the *test_is_prime* function, add an *assert* statement underneath as shown below. Then you can accept the suggestion.
-
-![start with assert](./images/ct18.png?raw=true "start with assert")   
-
-
-6. From here, you can continue with the Enter/Tab key sequences to get a set of assertion tests.
-
-7. While this is an ok set of basic tests, we'd like to ensure better coverage. Let's ask Copilot about any other edge cases. Enter the prompt below into the chat window. Copilot should respond with an explanation of different edge cases and sample code for the tests.
-```
-are there any other edge cases that should be tested?
-```
-![edge cases generation](./images/ct38.png?raw=true "edge cases generation")   
-
-8. We can now copy the example test cases and add them to our testing file via the usual chat methods. (Hover over output, copy it, and paste/insert into the testing file we previously created).
-
-![edge cases insert](./images/ct39.png?raw=true "edge cases insert")   
-
-9. Let's go ahead and have Copilot document our test cases here. Highlight the test cases and then, using the Cmd+I dialog, enter the shortcut command */doc*. You can accept the suggested documentation if you're happy with it.
 <p align="center">
 **[END OF LAB]**
 </p>
 </br></br>
 
-**Lab 4 - Validating Inputs**
+**Lab 5 - Validating Inputs**
 
 **Purpose: In this lab, we'll see how to have Copilot help validate inputs in functions.**
 
-1. Copilot can also help with other kinds of validation besides general test cases. It can also validate that inputs going into a function are valid. Highlight your *is_prime* code and enter the prompt below into the Copilot Chat interface.
+1. Copilot can also help with other kinds of validation besides general test cases. It can also validate that inputs going into a function are valid. Go back to the *prime.py* file, highlight your *is_prime* code and enter the prompt below into the Copilot Chat interface.
 
 ```
 generate asserts to ensure that the inputs to the function are valid
@@ -301,14 +274,28 @@ Referencing #editor, add test cases for other types of inputs
 ```
 
 8. Go ahead and hover over the output and add them to the file with the test cases.
-![adding test cases for different input types](./images/ct43.png?raw=true "adding test cases for different input types")  
+![adding test cases for different input types](./images/ct43.png?raw=true "adding test cases for different input types")
+
+9. Finally, as long as we're here, let's see if Copilot can help refactor our code to make it more testable. Enter the query below in the Chat interface. After the results are shown, you can go ahead and use them to replace your code if you want.
+```
+Refactor the code in #file:prime.py to make it more easily testable
+```
+![Refactoring for testing](./images/ct72.png?raw=true "refactoring for testing")  
+
+10. You can do the same thing for the webscraper.py file.
+Enter the query below in the Chat interface. After the results are shown, you can go ahead and use them to replace your code if you want.
+```
+Refactor the code in #file:webscraper.py to make it more easily testable
+```
+![Refactoring for testing](./images/ct73.png?raw=true "refactoring for testing")  
+
 
 <p align="center">
 **[END OF LAB]**
 </p>
 </br></br>
 
-**Lab 5 - Leveraging frameworks and TDD**
+**Lab 6 - Leveraging frameworks and TDD**
 
 **Purpose: In this lab, we'll see how to leverage Copilot with testing frameworks and how to do Test-Driven Development with it.**
 
