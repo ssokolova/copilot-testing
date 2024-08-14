@@ -63,9 +63,9 @@ def test_is_prime(number, expected):
 </p>
 </br></br>
 
-**Lab 2 - High level Copilot Testing Advice**
+**Lab 2 - High-level Copilot Testing Advice**
 
-**Purpose: In this lab, we’ll start to learn about testing with Copilot at a high levele**
+**Purpose: In this lab, we’ll start to learn about getting more general assistance from Copilot for testing**
 
 1. In our repository, there is an example Python file we'll be using to start with. You can open it by clicking on [**webscraper.py**](./webscraper.py) , or, in the terminal, enter
 
