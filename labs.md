@@ -179,6 +179,8 @@ code create-tables.sql
 ![copy markdown](./images/ct68.png?raw=true "copy markdown")
 
 9. You can then paste this into a text file, save it as .md (markdown) format and then view it in a markdown viewer or convert it.
+![copy markdown](./images/ct69.png?raw=true "copy markdown")
+10. 
 
 2. Copilot may show a suggestion for completion, but we'll ignore that for now. Click in a different window outside of the file editor.  There should be a red wavy line showing on the last line of the file. This means there's an issue with the code.
 ![error in function](./images/ct15.png?raw=true "error in function") 
