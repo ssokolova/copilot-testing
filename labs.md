@@ -19,7 +19,7 @@ code prime.py
 
 ![using the shortcut command to gen tests](./images/ct07b.png?raw=true "using the shortcut command to gen tests")
 
-3. After running the command, Copilot generates some basic assert-based tests. The tests may first be shown in a pop up dialog window. You can add them into a separate file by accepting them using the the checkmark control in the upper right of the dialog.
+3. After running the command, Copilot generates some basic assert-based tests. The tests may first be shown in a pop up dialog window. You can add them into a separate file by accepting them using the the checkmark control in the upper right of the dialog. (You can  close that dialog afterwards.)
 
 ![proposed tests into new file](./images/ct70.png?raw=true "proposed tests into new file")
 
