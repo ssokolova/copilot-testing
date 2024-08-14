@@ -24,9 +24,11 @@ code prime.py
 ![proposed tests into new file](./images/ct72.png?raw=true "proposed tests into new file")
 
 4. Now let's save this new file as *test_prime.py*. With the new file with the test cases selected in the editor, click on the *3-bar* menu in the upper left corner of the codespace, then click *File*, then *Save*, then save the file as *test_prime.py*.
+   
 ![saving file](./images/ct71.png?raw=true "saving files")
    
 5. We can also get the same results from invoking the *Generate Tests* entry from the context menu. Try that now by going back to the *prime.py* file highlighting the code, right-clicking on it, then selecting *Copilot* and then *Generate Tests*. Since we already have tests generated from the other command, you can just close this dialog.
+   
 ![proposed tests from the menu](./images/ct09b.png?raw=true "proposed tests from the menu")
 
 6. We can also use comments to have Copilot create tests. Let's try this in the original *prime.py* file. Under the code, add a comment line that tell Copilot to create tests for the code above.
@@ -71,9 +73,11 @@ How can I test #file:webscraper.py?
 ```
 
 3. Copilot will likely have generated some output with a set of instruction and some example code similar to what's shown below. Notice that it brings in unit testing and mocking frameworks.
+   
 ![testing suggestions for file](./images/ct45.png?raw=true "testing suggestions for file")
 
 4. Let's take the generated code and put it into a new file. Howver over the code section, and click on the 3 dots at the end of the popup bar.
+   
 ![hover](./images/ct46.png?raw=true "hover")
 
 5. From the menu that pops up, select the *Insert into New File* option and insert the code into a new file in the project.
