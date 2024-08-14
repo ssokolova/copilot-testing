@@ -1,5 +1,5 @@
 # Automating Testing with GitHub Copilot
-## Revision 2.0 - 08/13/24
+## Revision 2.1 - 08/13/24
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
@@ -37,6 +37,8 @@ code prime.py
 # Create tests for the code above
 ```
 
+![tests from comments](./images/ct74.png?raw=true "tests from comments")
+
 7. Hit return (if you haven't) and Copilot will probably supply a generic testing routine, such as below (NOTE: if you only get the first line, you may need to "nudge" Copilot by typing "result" or similar after accepting the first line):
 
 ```
@@ -65,7 +67,7 @@ def test_is_prime(number, expected):
 
 **Purpose: In this lab, we’ll start to learn about testing with Copilot at a high levele**
 
-1. In our repository, there is an example Python file we'll be using to start with. You can open it by clicking on [**webscraper.py**](./webscaper.py) , or, in the terminal, enter
+1. In our repository, there is an example Python file we'll be using to start with. You can open it by clicking on [**webscraper.py**](./webscraper.py) , or, in the terminal, enter
 
 ```
 code webscraper.py
