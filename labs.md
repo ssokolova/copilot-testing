@@ -147,9 +147,9 @@ code create-tables.sql
 </br></br>
 
 
-**Lab 4 - Documentation and conversions**
+**Lab 4 - Documentation for Testing**
 
-**Purpose: In this lab, we'll see how to use Copilot to help document and convert code for testing.**
+**Purpose: In this lab, we'll see how to use Copilot to help document content for testing.**
 
 1. To have the testing code be able to be maintained, it should be documented well. We can have Copilot do this for us too. In the editor, switch to the *test_webscraper.py* file and highlight the code. Open the shortcut dialog with CTRL/CMD+I and enter the */doc* command in it. 
 ```
@@ -172,10 +172,13 @@ code create-tables.sql
 6. Let's try one more doc step here. Let's have Copilot generate functional documentation to help us understand the code we're testing. In the chat interface, enter in the prompt "Create functional documentation for the #file:webscraper.py" and hit Enter. Copilot should then generate extensive documentation with the details of the file.
 ![functional doc](./images/ct66.png?raw=true "functional doc")
 
-ou need to remove the existing testing code (if any, in the prime.py file) and delete all blank lines under it. Then start typing the start of a testing function, but just the first line.
-```
-def test_is_prime(number):
-```
+7. Having this documentation generated in Copilot is useful, but to make it more widely sharable we need to be able to save it separately. Simply copying it from the Chat interface won't preserve any generated code. To ensure you get everything, it works best to click on the "..." menu in the upper right of the Chat section and select "Open Chat in Editor". Go ahead and do that now.
+![open chat in editor](./images/ct67.png?raw=true "open chat in editor")
+
+8. In the copy of the chat that is open in the editor now, you can right-click and select *Copy All*. This will copy all the content. 
+![copy markdown](./images/ct68.png?raw=true "copy markdown")
+
+9. You can then paste this into a text file, save it as .md (markdown) format and then view it in a markdown viewer or convert it.
 
 2. Copilot may show a suggestion for completion, but we'll ignore that for now. Click in a different window outside of the file editor.  There should be a red wavy line showing on the last line of the file. This means there's an issue with the code.
 ![error in function](./images/ct15.png?raw=true "error in function") 
@@ -189,6 +192,7 @@ def test_is_prime(number):
 6. To get something more direct (like specific use cases), we can add additional tokens and/or keywords to the context. Let's add an *assert* keywork and then let Copilot suggest the remaining part of the test. In the *test_is_prime* function, add an *assert* statement underneath as shown below. Then you can accept the suggestion.
 
 ![start with assert](./images/ct18.png?raw=true "start with assert")   
+
 
 6. From here, you can continue with the Enter/Tab key sequences to get a set of assertion tests.
 
