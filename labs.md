@@ -239,27 +239,7 @@ generate asserts to ensure that the inputs to the function are valid
 
 ![validating inputs with asserts](./images/ct40.png?raw=true "validating inputs with asserts")   
 
-```
-(From Copilot:)
-
-To ensure that the function inputs are valid, we can add assertions
-at the start of the function. We want to make sure that the input 
-is an integer and that it is not negative. Here's how you can do it:
-
-
-def is_prime(num):
-    assert isinstance(num, int), "Input must be an integer"
-    assert num >= 0, "Input must be a non-negative integer"
-
-    if num < 2:
-        return False
-    for i in range(2, int(num ** 0.5) + 1):
-        if num % i == 0:
-            return False
-    return True
-```
-
-3. We can also be less specific about using asserts and ask Copilot to generate checks. Try this prompt:
+3. We can also be less specific about using asserts and ask Copilot to generate checks. Try this prompt (again in the Chat interface):
 
 ```
 generate checks to ensure that the inputs to the function are valid
@@ -269,37 +249,12 @@ generate checks to ensure that the inputs to the function are valid
 
 ![validating inputs with checks](./images/ct41.png?raw=true "validating inputs with checks")  
 
-```
-To ensure that the inputs to the `is_prime` function are valid, you
-can add checks at the start of the function.
- Here's how you can do it:
-
-python
-def is_prime(num):
-    if not isinstance(num, int):
-        raise TypeError("Input must be an integer")
-    if num < 0:
-        raise ValueError("Input must be a non-negative integer")
-
-    if num < 2:
-        return False
-    for i in range(2, int(num ** 0.5) + 1):
-        if num % i == 0:
-            return False
-    return True
-
-
-In this code, the `if` statements will raise a `TypeError` if the
- input is not an integer or a `ValueError` if it's a negative 
-number.
- This way, you can ensure that the inputs to the function are valid.
-```
 
 5. When you're happy with this code, you can go ahead and add them to your code using the options in the code window of the chat.
 
 ![validating inputs with checks](./images/ct42.png?raw=true "validating inputs with checks")  
 
-6. While we are discussing inputs, we should also consider other types of inputs to test for. Switch back to the file with the test cases and have it open in the editor. Now let's prompt Copilot to look at these and consider any other types of inputs. Enter ther following prompt:
+6. While we are discussing inputs, we should also consider other types of inputs to test for. Switch back to the *test_prime.py* file with the test cases and have it open in the editor. Now let's prompt Copilot to look at these and consider any other types of inputs. Enter ther following prompt:
 
 ```
 Referencing #editor, add test cases for other types of inputs
@@ -321,7 +276,16 @@ Referencing #editor, add test cases for other types of inputs
 
 ![adding test cases for different input types](./images/ct43.png?raw=true "adding test cases for different input types")
 
-9. Finally, as long as we're here, let's see if Copilot can help refactor our code to make it more testable. Enter the query below in the Chat interface. After the results are shown, you can go ahead and use them to replace your code if you want.
+9. Repeat the above with the query to see if there are any other edge cases we should be checking. (You can add them if you want afterwards.)
+
+```
+are there any other edge cases that should be tested?
+```
+
+![adding test cases for edge cases](./images/ct79.png?raw=true "adding test cases for edge cases")
+
+
+10. Finally, as long as we're here, let's see if Copilot can help refactor our code to make it more testable. Enter the query below in the Chat interface. After the results are shown, you can go ahead and use them to replace your code if you want.
 
 ```
 Refactor the code in #file:prime.py to make it more easily testable
@@ -329,7 +293,7 @@ Refactor the code in #file:prime.py to make it more easily testable
 
 ![Refactoring for testing](./images/ct72.png?raw=true "refactoring for testing")  
 
-10. You can do the same thing for the webscraper.py file.
+11. You can do the same thing for the webscraper.py file.
 Enter the query below in the Chat interface. After the results are shown, you can go ahead and use them to replace your code if you want.
 
 ```
