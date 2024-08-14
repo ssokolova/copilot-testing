@@ -91,6 +91,12 @@ How can I measure code coverage on this file?
 ![query on code coverage](./images/ct49.png?raw=true "query on code coverage")
 
 9. Save any changes to your files.
+    
+<p align="center">
+**[END OF LAB]**
+</p>
+</br></br>
+
 
 **Lab 3 - Using other Copilot features to help with testing**
 
@@ -141,12 +147,32 @@ code create-tables.sql
 </br></br>
 
 
+**Lab 4 - Documentation and conversions**
 
-**Lab 3 - Generating tests through code suggestions and corrections**
+**Purpose: In this lab, we'll see how to use Copilot to help document and convert code for testing.**
 
-**Purpose: In this lab, we'll see how to have Copilot finish tests for us using code suggestions and corrections.**
+1. To have the testing code be able to be maintained, it should be documented well. We can have Copilot do this for us too. In the editor, switch to the *test_webscraper.py* file and highlight the code. Open the shortcut dialog with CTRL/CMD+I and enter the */doc* command in it. 
+```
+/doc
+```
+ ![using doc shortcut](./images/ct59.png?raw=true "using doc shortcut") 
 
-1. To get started using this approach, you need to remove the existing testing code (if any, in the prime.py file) and delete all blank lines under it. Then start typing the start of a testing function, but just the first line.
+2. Hit Enter and you'll see some documentation suggested at the start of the file. You can just go ahead and accept that.
+ ![initial doc suggestion](./images/ct60.png?raw=true "initial doc suggestion")
+
+3. This is useful, but we'd like to have the test cases more thoroughly documented. Bring up the chat dialog again with the CTRL/CMD+I sequence and tell Copilot in the dialog to "verbosely comment all the code so it's easy to understand".
+ ![verbose doc prompt](./images/ct63.png?raw=true "verbose doc prompt")
+
+4. Hit Enter and you should more thorough comments suggested throughout the code body. You can go ahead and *Accept* them.
+![verbose doc suggestions](./images/ct64.png?raw=true "verbose doc suggestions")
+
+5. While we're working with documentation, sometimes it can be useful to have documentation on features like APIs to go off of. Let's have Copilot try to generate that for us. In the chat interface, enter "Create API documentation for the APIs in #file:webscraper.py". After hitting Enter, you should eventually see some documentation for the APIs in among other output.
+![api doc](./images/ct65.png?raw=true "api doc")
+
+6. Let's try one more doc step here. Let's have Copilot generate functional documentation to help us understand the code we're testing. In the chat interface, enter in the prompt "Create functional documentation for the #file:webscraper.py" and hit Enter. Copilot should then generate extensive documentation with the details of the file.
+![functional doc](./images/ct66.png?raw=true "functional doc")
+
+ou need to remove the existing testing code (if any, in the prime.py file) and delete all blank lines under it. Then start typing the start of a testing function, but just the first line.
 ```
 def test_is_prime(number):
 ```
