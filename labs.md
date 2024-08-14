@@ -83,7 +83,7 @@ How can I test #file:webscraper.py?
    
 ![testing suggestions for file](./images/ct45.png?raw=true "testing suggestions for file")
 
-4. Let's take the generated code and put it into a new file. Howver over the code section, and click on the 3 dots at the end of the popup bar.
+4. Let's take the generated code and put it into a new file. Hover over the code section, and click on the 3 dots at the end of the popup bar.
    
 ![hover](./images/ct46.png?raw=true "hover")
 
