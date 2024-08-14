@@ -91,7 +91,7 @@ How can I test #file:webscraper.py?
 
 ![insert into new file](./images/ct47.png?raw=true "insert into new file")
 
-6. Now, select the file, and save it. You can use the 3 bar menu on the left, then File->Save and save it as "test_webscraper.py".
+6. Now, select the file, and save it. You can use the 3 bar menu on the left, then File->Save and save it as *test_webscraper.py*.
 
 ![saving as new file](./images/ct75.png?raw=true "saving as new file")
 
