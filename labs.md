@@ -105,7 +105,7 @@ How can I measure code coverage on this file?
 
 ![query on code coverage](./images/ct76.png?raw=true "query on code coverage")
 
-8. Near the bottom of this output, you may see some *Example Commands in Sequence*. If so, hover over them and click the icon that looks like a terminal to send these commands directly to the terminal.
+8. Near the bottom of this output, you may see some *Example Commands in Sequence*. If so, hover over them and click the icon that looks like a terminal to send these commands directly to the terminal. (If you don't see a group, you can still hover over the individual commands, and insert them one at a time into the terminal via the popup terminal icon.)
 
 ![query on code coverage](./images/ct77.png?raw=true "query on code coverage")
 
