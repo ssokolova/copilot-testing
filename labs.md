@@ -350,10 +350,10 @@ Refactor the code in #file:webscraper.py to make it more easily testable
 
 **Purpose: In this lab, we'll see how to leverage Copilot with testing frameworks and how to do Test-Driven Development with it.**
 
-1. Let's look at a TDD approach of creating the test cases with a failing test and then immplementing the code to be tested. Consider a simple example where we want to create a test class and tests for students at a university. We'll use Mockito as our testing framework. Let's have Copilot create a pom.xml file for us with a mockito dependency. In the separate chat interface, enter the following prompt:
+1. Let's look at a TDD approach of creating the test cases with a failing test and then immplementing the code to be tested. Consider a simple example where we want to create a test class and tests for students at a university. We'll use Mockito in our testing framework. Let's have Copilot create a pom.xml file for us with a mockito dependency. In the separate chat interface, enter the following prompt:
 
 ```
-add a pom.xml file with a mockito dependency, and compiler source and target version 1.8
+add a pom.xml file with a mockito dependency version 3.3.3, and compiler source and target version 1.8
 ```
 
 ![add pom with mockito dependency](./images/ct33.png?raw=true "add pom with mockito dependency")  
