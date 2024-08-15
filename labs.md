@@ -148,7 +148,8 @@ import pytest2
 
 ![copilot fix](./images/ct84.png?raw=true "Copilot fix")
 
-4. First, let's try out the Copilot */tests* shortcut command with a different kind of file and language. There's a large demo file of SQL statements in this project named [**create-tables.sql**](./create-tables.sql). Open that.
+
+4. Next, let's try out the Copilot */tests* shortcut command with a different kind of file and language. There's a large demo file of SQL statements in this project named [**create-tables.sql**](./create-tables.sql). Open that.
 
 ```
 code create-tables.sql
