@@ -79,6 +79,8 @@ code webscraper.py
 How can I test #file:webscraper.py?
 ```
 
+![query in chat](./images/ct80.png?raw=true "query in chat")
+
 3. Copilot will likely have generated some output with a set of instruction and some example code similar to what's shown below. Notice that it brings in a unit testing framework.
    
 ![testing suggestions for file](./images/ct45.png?raw=true "testing suggestions for file")
