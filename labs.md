@@ -135,35 +135,48 @@ Are there any other edge cases that should be tested?
 
 **Purpose: In this lab, we'll see how to leverage some of Copilot's other features to help with testing**
 
-1. First, let's try out the Copilot */tests* shortcut command with a different kind of file and language. There's a large demo file of SQL statements in this project named [**create-tables.sql**](./create-tables.sql). Open that.
+1. Let's see how the Copilot Fix functionality can help us out. Click on/open the *test_prime.py* file from the earlier labs. At the top, let's add a new import. Type in the line below.
+```
+import pytest2
+```
+
+2. You may already know that this is not a valid import, but let's assume we've tried to use it and it failed. So, let's see if Copilot can help identify and correct the issue for us. Select/highlight *pytest2* and then right-click and select *Copilot* from the menu. Then select *Fix this* from the submenu.
+   
+![copilot fix](./images/ct83.png?raw=true "Copilot fix")
+
+3. Copilot should recognize that this is not a valid import and then suggest a correction/fix that you can then accept from the dialog.
+
+![copilot fix](./images/ct84.png?raw=true "Copilot fix")
+
+4. First, let's try out the Copilot */tests* shortcut command with a different kind of file and language. There's a large demo file of SQL statements in this project named [**create-tables.sql**](./create-tables.sql). Open that.
 
 ```
 code create-tables.sql
 ```
 
-2. Since this is a different type of file, we will specify the filename when we ask Copilot to generate tests this time. Enter the following question in the chat interface. It will automatically add an *@workspace* participant at the start - delete the "@workspace" part.
+5. Since this is a different type of file, we will specify the filename when we ask Copilot to generate tests this time. Enter the following question in the chat interface. It will automatically add an *@workspace* participant at the start - delete the "@workspace" part.
 
 ```
 /tests #file:create-tables.sql
 ```
 
-3. Copilot should respond with some overall instructions/plan and suggested examples of how to do the steps. You can just review these to see the example, you don't need to do anything with them.
+6. Copilot should respond with some overall instructions/plan and suggested examples of how to do the steps. You can just review these to see the example, you don't need to do anything with them.
 
 ![testing suggestions for SQL](./images/ct06.png?raw=true "testing suggestions for sql")   
 
-4. Suppose we need to better understand the code we're testing. We can have Copilot explain the code to us. Highlight all of the code in the file *webscraper.py* and then use the CMD/CTRL+I shortcut to bring up the chat dialog window and type in */explain*.
+7. Suppose we need to better understand the code we're testing. We can have Copilot explain the code to us. Highlight all of the code in the file *webscraper.py* and then use the CMD/CTRL+I shortcut to bring up the chat dialog window and type in */explain*.
 
 ![explain webscraper.py](./images/ct51.png?raw=true "explain webscraper.py")   
 
-5. This will dump a lot of output in the dialog. To better review it, click on the *View in Chat* button to put it in the main Chat interface.
+8. This will dump a lot of output in the dialog. To better review it, click on the *View in Chat* button to put it in the main Chat interface.
 
 ![view in chat](./images/ct52.png?raw=true "view in chat")   
 
-6. In the chat interface, you can scan through the output if you want, but you don't have to. It is interesting to go back up to the top of the output, and expand the "Used ## references" section to see the references that Copilot used in providing the explanation.
+9. In the chat interface, you can scan through the output if you want, but you don't have to. It is interesting to go back up to the top of the output, and expand the "Used ## references" section to see the references that Copilot used in providing the explanation.
 
 ![view in chat](./images/ct53.png?raw=true "view in chat")
 
-7. While we're at it, let's have Copilot explain how the testing file it created for us works. In the chat interface - enter *@workspace /explain # and pause. There should then be a popup, where you can select the *#file* entry. (You may have to use the arrow keys to select it.)
+10. While we're at it, let's have Copilot explain how the testing file it created for us works. In the chat interface - enter *@workspace /explain # and pause. There should then be a popup, where you can select the *#file* entry. (You may have to use the arrow keys to select it.)
 
 ```
 @workspace /explain #
@@ -171,17 +184,17 @@ code create-tables.sql
 
 ![selecting file](./images/ct54.png?raw=true "selecting file")
 
-8. After you selecting the *#file* selector, you should get a popup near the center top of the codespace interface. This will let you select the *test_webscraper.py* file. Select that file.
+11. After you selecting the *#file* selector, you should get a popup near the center top of the codespace interface. This will let you select the *test_webscraper.py* file. Select that file.
 
 ![selecting file](./images/ct55.png?raw=true "selecting file")
 
-9. You'll then have a highlighted command to explain the file. Hit Enter for that. You may then have another popup to select the range of the testing file to explain. If so, you can just select the *TestWebScraper* entry.
+12. You'll then have a highlighted command to explain the file. Hit Enter for that. You may then have another popup to select the range of the testing file to explain. If so, you can just select the *TestWebScraper* entry.
  
  ![full entry](./images/ct57.png?raw=true "full entry")
  
  ![full entry](./images/ct56.png?raw=true "full entry")  
 
-10. After executing this, you'll likely see some updated code suggestions, but you can scan through to see the sections with explanations.
+13. After executing this, you'll likely see some updated code suggestions, but you can scan through to see the sections with explanations.
 
  ![explanation](./images/ct58.png?raw=true "explanation") 
 
