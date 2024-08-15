@@ -239,7 +239,12 @@ create API documentation for the APIs in #file:webscraper.py
 ![api doc](./images/ct65.png?raw=true "api doc")
 
 
-6. Let's try one more doc step here. Let's have Copilot generate functional documentation to help us understand the code we're testing. In the chat interface, enter in the prompt "Create functional documentation for the #file:webscraper.py" and hit Enter. Copilot should then generate extensive documentation with the details of the file.
+6. Before we do the remaining steps, let's start a new Chat session. Back in the left side Chat window, click the "+" sign at the top to start a new session.
+
+![new chat](./images/ct85.png?raw=true "New chat")
+
+
+7. Let's try one more doc step here. Let's have Copilot generate functional documentation to help us understand the code we're testing. In the chat interface, enter in the prompt "Create functional documentation for the #file:webscraper.py" and hit Enter. Copilot should then generate extensive documentation with the details of the file.
 
 ```
 create functional documentation for the #file:webscraper.py
@@ -247,15 +252,18 @@ create functional documentation for the #file:webscraper.py
 
 ![functional doc](./images/ct66.png?raw=true "functional doc")
 
-7. Having this documentation generated in Copilot is useful, but to make it more widely sharable we need to be able to save it separately. Simply copying it from the Chat interface won't preserve any generated code. To ensure you get everything, it works best to click on the "..." menu in the upper right of the Chat section and select "Open Chat in Editor". Go ahead and do that now.
+
+8. Having this documentation generated in Copilot is useful, but to make it more widely sharable we need to be able to save it separately. Simply copying it from the Chat interface won't preserve any generated code. To ensure you get everything, it works best to click on the "..." menu in the upper right of the Chat section and select "Open Chat in Editor". Go ahead and do that now.
 
 ![open chat in editor](./images/ct67.png?raw=true "open chat in editor")
 
-8. In the copy of the chat that is open in the editor now, you can right-click and select *Copy All*. This will copy all the content. 
+
+9. In the copy of the chat that is open in the editor now, you can right-click and select *Copy All*. This will copy all the content. 
 
 ![copy markdown](./images/ct68.png?raw=true "copy markdown")
 
-9. You can then paste this into a text file, save it as .md (markdown) format and then view it in a markdown viewer or convert it.
+
+10. You can then paste this into a text file, save it as .md (markdown) format and then view it in a markdown viewer or convert it.
 
 ![copy markdown](./images/ct69.png?raw=true "copy markdown")
 
