@@ -289,7 +289,7 @@ generate asserts to ensure that the inputs to the function are valid
 3. We can also be less specific about using asserts and ask Copilot to generate checks. Try this prompt (again in the Chat interface):
 
 ```
-generate checks to ensure that the inputs to the function are valid
+generate checks (without using asserts) to ensure that the inputs to the function are valid
 ```
 
 4. This should allow Copilot to generate code to validate the inputs, but with a more standard coding mechanism to surface any issues. Here's what example output from that might look like.
@@ -297,7 +297,7 @@ generate checks to ensure that the inputs to the function are valid
 ![validating inputs with checks](./images/ct41.png?raw=true "validating inputs with checks")  
 
 
-5. When you're happy with this code, you can go ahead and add them to your code using the options in the code window of the chat.
+5. When you're happy with this code, you can go ahead and replace the highlighted code in the file using the options in the code window of the chat.
 
 ![validating inputs with checks](./images/ct42.png?raw=true "validating inputs with checks")  
 
@@ -323,16 +323,7 @@ Referencing #editor, add test cases for other types of inputs
 
 ![adding test cases for different input types](./images/ct43.png?raw=true "adding test cases for different input types")
 
-9. Repeat the above with the query to see if there are any other edge cases we should be checking. (You can add them if you want afterwards.)
-
-```
-are there any other edge cases that should be tested?
-```
-
-![adding test cases for edge cases](./images/ct79.png?raw=true "adding test cases for edge cases")
-
-
-10. Finally, as long as we're here, let's see if Copilot can help refactor our code to make it more testable. Enter the query below in the Chat interface. After the results are shown, you can go ahead and use them to replace your code if you want.
+9. Finally, as long as we're here, let's see if Copilot can help refactor our code to make it more testable. Enter the query below in the Chat interface. After the results are shown, you can go ahead and use them to replace your code if you want.
 
 ```
 Refactor the code in #file:prime.py to make it more easily testable
@@ -340,7 +331,7 @@ Refactor the code in #file:prime.py to make it more easily testable
 
 ![Refactoring for testing](./images/ct72.png?raw=true "refactoring for testing")  
 
-11. You can do the same thing for the webscraper.py file.
+10. You can do the same thing for the webscraper.py file.
 Enter the query below in the Chat interface. After the results are shown, you can go ahead and use them to replace your code if you want.
 
 ```
