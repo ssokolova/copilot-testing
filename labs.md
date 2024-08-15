@@ -31,7 +31,7 @@ code prime.py
    
 ![proposed tests from the menu](./images/ct09b.png?raw=true "proposed tests from the menu")
 
-6. We can also use comments to have Copilot create tests. Let's try this in the original *prime.py* file. Under the code, add a comment line that tell Copilot to create tests for the code above.
+6. We can also use comments to have Copilot create tests. Let's try this in the original *prime.py* file. Under the code, add a comment line that tells Copilot to create tests for the code above.
 
 ```
 # Create tests for the code above
@@ -51,7 +51,7 @@ def test_is_prime(number, expected):
 8. Depending on your particular comment and context, Copilot may produce a more generic testing function or a set of individual test cases. To ensure you get the latter,  delete the generated code from the previous comment and redo the steps with this comment. (You may need to hit return again and give Copilot a few seconds to generate the tests.)
 
 ```
-# Create a set of 10 unit tests for the code above
+# Create a set of 20 unit tests for the code above
 ```
 
 9. In this case, Copilot will usually generate a more explicit set of tests wrapped in a testing function. An example is shown next.
