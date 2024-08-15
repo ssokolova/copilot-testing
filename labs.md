@@ -219,17 +219,31 @@ code create-tables.sql
 
 3. This is useful, but we'd like to have the test cases more thoroughly documented. Bring up the chat dialog again with the CTRL/CMD+I sequence and tell Copilot in the dialog to "verbosely comment all the code so it's easy to understand".
 
+```
+verbosely comment all the code so it's easy to understand
+```
+
  ![verbose doc prompt](./images/ct63.png?raw=true "verbose doc prompt")
 
 4. Hit Enter and you should more thorough comments suggested throughout the code body. You can go ahead and *Accept* them.
 
 ![verbose doc suggestions](./images/ct64.png?raw=true "verbose doc suggestions")
 
+
 5. While we're working with documentation, sometimes it can be useful to have documentation on features like APIs to go off of. Let's have Copilot try to generate that for us. In the chat interface, enter "Create API documentation for the APIs in #file:webscraper.py". After hitting Enter, you should eventually see some documentation for the APIs in among other output.
+
+```
+create API documentation for the APIs in #file:webscraper.py
+```
 
 ![api doc](./images/ct65.png?raw=true "api doc")
 
+
 6. Let's try one more doc step here. Let's have Copilot generate functional documentation to help us understand the code we're testing. In the chat interface, enter in the prompt "Create functional documentation for the #file:webscraper.py" and hit Enter. Copilot should then generate extensive documentation with the details of the file.
+
+```
+create functional documentation for the #file:webscraper.py
+```
 
 ![functional doc](./images/ct66.png?raw=true "functional doc")
 
