@@ -1,5 +1,5 @@
 # Automating Testing with GitHub Copilot
-## Revision 2.2 - 08/15/24
+## Revision 2.3 - 08/15/24
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
@@ -419,11 +419,11 @@ mvn test
 
 
 <p align="center">
-**[END OF LAB]**
+[END OF LAB]
 </p>
 
 <p align="center">
-**THANKS!**
+THANKS!
 </p>
  
 
