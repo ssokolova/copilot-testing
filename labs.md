@@ -111,6 +111,19 @@ How can I measure code coverage on this file?
 
 9. When you click on that terminal icon, it should populate the terminal with those commands and you can run them. While there will be coverage numbers generated, they will not be accurate or complete, because our code doesn't currently run.
 ![coverage results](./images/ct78.png?raw=true "coverage results")
+
+10. Finally, let's have Copilot help us identify any other edge cases that we should consider. Switch back to the *test_prime.py* file, highlight the text, and then, in the Chat interface, enter the prompt "Are there any other edge cases that should be tested?".
+
+```
+Are there any other edge cases that should be tested?
+```
+
+![finding other test cases](./images/ct81.png?raw=true "Finding other test cases")
+
+11. This should result in some additional test cases being generated in Chat that you can then just replace in the *test_prime.py* file by using the *Insert at Cursor* icon that shows up when you hover over the code.
+
+![adding test cases](./images/ct82.png?raw=true "Adding test cases")
+
     
 <p align="center">
 **[END OF LAB]**
