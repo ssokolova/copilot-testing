@@ -1,5 +1,5 @@
 # Automating Testing with GitHub Copilot
-## Revision 2.1 - 08/13/24
+## Revision 2.2 - 08/15/24
 
 **Follow the startup instructions in the README.md file IF NOT ALREADY DONE!**
 
@@ -144,7 +144,7 @@ import pytest2
    
 ![copilot fix](./images/ct83.png?raw=true "Copilot fix")
 
-3. Copilot should recognize that this is not a valid import and then suggest a correction/fix that you can then accept from the dialog.
+3. Copilot should recognize that this is not a valid import and then suggest a correction/fix that you can then *Accept* from the dialog. (The suggested fix may be to *import pytest* or it may be to remove the line altogether.)
 
 ![copilot fix](./images/ct84.png?raw=true "Copilot fix")
 
@@ -173,11 +173,7 @@ code create-tables.sql
 
 ![view in chat](./images/ct52.png?raw=true "view in chat")   
 
-9. In the chat interface, you can scan through the output if you want, but you don't have to. It is interesting to go back up to the top of the output, and expand the "Used ## references" section to see the references that Copilot used in providing the explanation.
-
-![view in chat](./images/ct53.png?raw=true "view in chat")
-
-10. While we're at it, let's have Copilot explain how the testing file it created for us works. In the chat interface - enter *@workspace /explain # and pause. There should then be a popup, where you can select the *#file* entry. (You may have to use the arrow keys to select it.)
+9. While we're at it, let's have Copilot explain how the testing file it created for us works. In the chat interface - enter *@workspace /explain # and pause. There should then be a popup, where you can select the *#file* entry. (You may have to use the arrow keys to select it.)
 
 ```
 @workspace /explain #
@@ -185,17 +181,17 @@ code create-tables.sql
 
 ![selecting file](./images/ct54.png?raw=true "selecting file")
 
-11. After you selecting the *#file* selector, you should get a popup near the center top of the codespace interface. This will let you select the *test_webscraper.py* file. Select that file.
+10. After you selecting the *#file* selector, you should get a popup near the center top of the codespace interface. This will let you select the *test_webscraper.py* file. Select that file.
 
 ![selecting file](./images/ct55.png?raw=true "selecting file")
 
-12. You'll then have a highlighted command to explain the file. Hit Enter for that. You may then have another popup to select the range of the testing file to explain. If so, you can just select the *TestWebScraper* entry.
+11. You'll then have a highlighted command to explain the file. Hit Enter for that. You may then have another popup to select the range of the testing file to explain. If so, you can just select the *TestWebScraper* entry.
  
  ![full entry](./images/ct57.png?raw=true "full entry")
  
  ![full entry](./images/ct56.png?raw=true "full entry")  
 
-13. After executing this, you'll likely see some updated code suggestions, but you can scan through to see the sections with explanations.
+12. After executing this, you'll likely see some updated code suggestions, but you can scan through to see the sections with explanations.
 
  ![explanation](./images/ct58.png?raw=true "explanation") 
 
