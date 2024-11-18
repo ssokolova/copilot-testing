@@ -89,7 +89,7 @@ How can I test #file:webscraper.py?
    
 ![apply edits](./images/new-click-to-apply-edits.png?raw=true "apply edits")
 
-5. After this, you should see the testing code as a new file named *test_webscraper.py* in your editor.
+5. After this, you should see the testing code as a new file named *test_webscraper.py* in your editor. **Save the file as test_webscraper.py to make sure it has the correct name.**
 
 ![insert into new file](./images/new-test-output-to-file.png?raw=true "insert into new file")
 
@@ -215,56 +215,50 @@ code create-tables.sql
 /doc
 ```
 
- ![using doc shortcut](./images/ct59.png?raw=true "using doc shortcut") 
-
 2. Hit Enter and you'll see some documentation suggested at the start of the file. You can just go ahead and accept that.
  
- ![initial doc suggestion](./images/ct60.png?raw=true "initial doc suggestion")
+ ![initial doc suggestion](./images/new-doc-test_webscraper.png?raw=true "initial doc suggestion")
 
-3. This is useful, but we'd like to have the test cases more thoroughly documented. Bring up the chat dialog again with the CTRL/CMD+I sequence and tell Copilot in the dialog to "verbosely comment all the code so it's easy to understand".
+3. This is useful, but we'd like to have the test cases more thoroughly documented. With the code still highlighted, bring up the chat dialog again with the CTRL/CMD+I sequence and tell Copilot in the dialog to "verbosely comment all the code so it's easy to understand".
 
 ```
 verbosely comment all the code so it's easy to understand
 ```
 
- ![verbose doc prompt](./images/ct63.png?raw=true "verbose doc prompt")
+![verbose doc prompt](./images/new-verbosely-comment-code.png?raw=true "verbose doc prompt")
 
 4. Hit Enter and you should more thorough comments suggested throughout the code body. You can go ahead and *Accept* them.
 
-![verbose doc suggestions](./images/ct64.png?raw=true "verbose doc suggestions")
+![verbose doc suggestions](./images/new-code-with-verbose-comments.png?raw=true "verbose doc suggestions")
 
 
-5. While we're working with documentation, sometimes it can be useful to have documentation on features like APIs to go off of. Let's have Copilot try to generate that for us. In the chat interface, enter "Create API documentation for the APIs in #file:webscraper.py". After hitting Enter, you should eventually see some documentation for the APIs in among other output.
+5. While we're working with documentation, sometimes it can be useful to have documentation on features like APIs to go off of. Let's have Copilot try to generate that for us. In the chat interface, you can just clear the current content and enter "Create API documentation for the APIs in #file:webscraper.py". After hitting Enter, you should see documentation for the APIs as requested.
 
 ```
+/clear
 create API documentation for the APIs in #file:webscraper.py
 ```
 
-![api doc](./images/ct65.png?raw=true "api doc")
+![api doc](./images/new-api-docs.png?raw=true "api doc")
 
 
-6. Before we do the remaining steps, let's start a new Chat session. Back in the left side Chat window, click the "+" sign at the top to start a new session.
-
-![new chat](./images/ct85.png?raw=true "New chat")
-
-
-7. Let's try one more doc step here. Let's have Copilot generate functional documentation to help us understand the code we're testing. In the chat interface, enter in the prompt "Create functional documentation for the #file:webscraper.py" and hit Enter. Copilot should then generate extensive documentation with the details of the file.
+6. Let's try one more doc step here. Let's have Copilot generate functional documentation to help us understand the code we're testing. Start a new chat. In the new chat interface, enter in the prompt "Create functional documentation for the #file:webscraper.py" and hit Enter. Copilot should then generate extensive documentation with the details of the file.
 
 ```
 create functional documentation for the #file:webscraper.py
 ```
 
-![functional doc](./images/ct66.png?raw=true "functional doc")
+![functional doc](./images/new-functional-doc-output.png?raw=true "functional doc")
 
 
-8. Having this documentation generated in Copilot is useful, but to make it more widely sharable we need to be able to save it separately. Simply copying it from the Chat interface won't preserve any generated code. To ensure you get everything, it works best to click on the "..." menu in the upper right of the Chat section and select "Open Chat in Editor". Go ahead and do that now.
+7. Having this documentation generated in Copilot is useful, but to make it more widely sharable we need to be able to save it separately. Simply copying it from the Chat interface won't preserve any generated code. To ensure you get everything, it works best to click on the "..." menu in the upper right of the Chat section and select "Open Chat in Editor". Go ahead and do that now.
 
-![open chat in editor](./images/ct67.png?raw=true "open chat in editor")
+![open chat in editor](./images/new-open-chat-in-editor.png?raw=true "open chat in editor")
 
 
 9. In the copy of the chat that is open in the editor now, you can right-click and select *Copy All*. This will copy all the content. 
 
-![copy markdown](./images/ct68.png?raw=true "copy markdown")
+![copy markdown](./images/new-copy-chat-content-in-editor.png?raw=true "copy markdown")
 
 
 10. You can then paste this into a text file, save it as .md (markdown) format and then view it in a markdown viewer or convert it.
