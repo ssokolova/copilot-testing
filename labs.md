@@ -116,7 +116,7 @@ How can I measure code coverage on this file?
 Are there any other edge cases that should be tested?
 ```
 
-![finding other test cases](./images/ct81.png?raw=true "Finding other test cases")
+![finding other test cases](./images/new-edge-cases-to-apply.png?raw=true "Finding other test cases")
 
 11. This should result in some additional test cases being generated in Chat that you can then just replace in the *test_prime.py* file by using the *Apply in Editor* icon that shows up when you hover over the code and then clicking on the *Accept changes* link above the code change.
 
