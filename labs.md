@@ -335,7 +335,8 @@ What other kinds of test cases should we check for?
 refactor the code in #file:webscraper.py to make it more easily testable
 ```
 
-12. You should see some suggestions for improving testability in the file in the chat output. These can be applied to the current code if you want. 
+12. You should see some suggestions for improving testability in the file in the chat output. These can be applied to the current code if you want.
+    
 ![Refactoring for testing](./images/new-refactor-for-testability.png?raw=true "refactoring for testing")  
 
 
