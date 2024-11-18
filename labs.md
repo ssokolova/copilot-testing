@@ -93,22 +93,24 @@ How can I test #file:webscraper.py?
 
 ![insert into new file](./images/new-test-output-to-file.png?raw=true "insert into new file")
 
-6. Let's also look at how we can add code coverage information for the file. Select the *webscraper.py* file in the editor. Then, switch to the separate chat dialog and type the question in there. After you hit Enter, you should see some info from Copilot on how to do coverage.
+6. Let's also look at how we can add code coverage information for the file. Select the *webscraper.py* file in the editor. Then, switch to the separate chat dialog. To keep things clean, let's start a new chat. Click on the "+" sign in the upper right to start a new chat and type the question in there. After you hit Enter, you should see some info from Copilot on how to do coverage.
+
+![start new chat](./images/new-new-chat.png?raw=true "start new chat")  
 
 ```
 How can I measure code coverage on this file?
 ```
 
-![query on code coverage](./images/ct76.png?raw=true "query on code coverage")
+![query on code coverage](./images/new-code-coverage.png?raw=true "query on code coverage")
 
-8. Near the bottom of this output, you may see some *Example Commands in Sequence*. If so, hover over them and click the icon that looks like a terminal to send these commands directly to the terminal. (If you don't see a group, you can still hover over the individual commands, and insert them one at a time into the terminal via the popup terminal icon.)
+7. In the chat output, you'll see a set of commands that can be run from the command line. You can hover over each and click the icon that looks like a terminal to send these commands directly to the terminal. (If you don't see a group, you can still hover over the individual commands, and insert them one at a time into the terminal via the popup terminal icon.)
 
-![query on code coverage](./images/ct77.png?raw=true "query on code coverage")
+![query on code coverage](./images/new-hover-and-insert-into-terminal.png?raw=true "query on code coverage")
 
-9. When you click on that terminal icon, it should populate the terminal with those commands and you can run them. While there will be coverage numbers generated, they will not be accurate or complete, because our code doesn't currently run.
+9. When you click on that terminal icon, it should populate the terminal with those commands and you can run them. The code is not currently setup for coverage, so that won't run.
 ![coverage results](./images/ct78.png?raw=true "coverage results")
 
-10. Finally, let's have Copilot help us identify any other edge cases that we should consider. Switch back to the *test_prime.py* file, highlight the text, and then, in the Chat interface, enter the prompt "Are there any other edge cases that should be tested?".
+10. Finally, let's have Copilot help us identify any other edge cases that we should consider. Switch back to the *test-prime.py* file, highlight the text, and start a new chat. Then, in the Chat interface, enter the prompt "Are there any other edge cases that should be tested?".
 
 ```
 Are there any other edge cases that should be tested?
@@ -116,9 +118,9 @@ Are there any other edge cases that should be tested?
 
 ![finding other test cases](./images/ct81.png?raw=true "Finding other test cases")
 
-11. This should result in some additional test cases being generated in Chat that you can then just replace in the *test_prime.py* file by using the *Insert at Cursor* icon that shows up when you hover over the code.
+11. This should result in some additional test cases being generated in Chat that you can then just replace in the *test_prime.py* file by using the *Apply in Editor* icon that shows up when you hover over the code and then clicking on the *Accept changes* link above the code change.
 
-![adding test cases](./images/ct82.png?raw=true "Adding test cases")
+![adding test cases](./images/new-apply-edge-cases.png?raw=true "Adding test cases")
 
     
 <p align="center">
@@ -131,7 +133,7 @@ Are there any other edge cases that should be tested?
 
 **Purpose: In this lab, we'll see how to leverage some of Copilot's other features to help with testing**
 
-1. Let's see how the Copilot Fix functionality can help us out. Click on/open the *test_prime.py* file from the earlier labs. At the top, let's add a new import. Type in the line below.
+1. Let's see how the Copilot Fix functionality can help us out. Click on/open the *test-prime.py* file from the earlier labs. At the top, let's add a new import. Type in the line below.
 ```
 import pytest2
 ```
