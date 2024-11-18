@@ -20,6 +20,7 @@
 				"editor.renderWhitespace": "boundary",
 				"errorLens.gutterIconsEnabled": true,
 				"errorLens.addAnnotationTextPrefixes": false,
+				"github.copilot.chat.setupTests.enabled": false,
 				"errorLens.enabledDiagnosticLevels": ["error", "warning"],
 			        "editor.wordWrap": "bounded",
 				"editor.wordWrapColumn": 9999
