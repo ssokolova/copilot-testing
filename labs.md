@@ -79,25 +79,21 @@ code webscraper.py
 How can I test #file:webscraper.py?
 ```
 
-![query in chat](./images/ct80.png?raw=true "query in chat")
+![query in chat](./images/new-how-to-test-select-file.png?raw=true "query in chat")
 
 3. Copilot will likely have generated some output with a set of instruction and some example code similar to what's shown below. Notice that it brings in a unit testing framework. The generated code may not be complete - for example, it may have *placeholders* for input and output data.
    
-![testing suggestions for file](./images/ct45.png?raw=true "testing suggestions for file")
+![testing suggestions for file](./images/new-how-to-test-webscraper.png?raw=true "testing suggestions for file")
 
-4. Let's take the generated code and put it into a new file. Hover over the code section, and click on the 3 dots at the end of the popup bar.
+4. Let's take the generated code and put it into a new file. Click on the checkmark in the top right corner of the code block (next to the trash can).
    
-![hover](./images/ct46.png?raw=true "hover")
+![apply edits](./images/new-click-to-apply-edits.png?raw=true "apply edits")
 
-5. From the menu that pops up, select the *Insert into New File* option and insert the code into a new file in the project.
+5. After this, you should see the testing code as a new file named *test_webscraper.py* in your editor.
 
-![insert into new file](./images/ct47.png?raw=true "insert into new file")
+![insert into new file](./images/new-test-output-to-file.png?raw=true "insert into new file")
 
-6. Now, select the file, and save it. You can use the 3 bar menu on the left, then File->Save and save it as *test_webscraper.py*.
-
-![saving as new file](./images/ct75.png?raw=true "saving as new file")
-
-7. Let's also look at how we can add code coverage information for the file. Select the *webscraper.py* file in the editor. Then, switch to the separate chat dialog and type the question in there. After you hit Enter, you should see some info from Copilot on how to do coverage.
+6. Let's also look at how we can add code coverage information for the file. Select the *webscraper.py* file in the editor. Then, switch to the separate chat dialog and type the question in there. After you hit Enter, you should see some info from Copilot on how to do coverage.
 
 ```
 How can I measure code coverage on this file?
