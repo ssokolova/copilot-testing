@@ -311,8 +311,9 @@ What other kinds of test cases should we check for?
    
 8. To make sure we get the entire file as context, we could use the *#file* selector. But we can also do it a different way. First, let's *cancel* the current context in the chat dialog by clicking on the icon that looks like an "eye" at the end of the *test-prime.py* item n the chat. (See below for where to click and what it should look like after.)
    
-![disable current file context](./images/new-disable-current-context.png?raw=true "disable current file context") 
-![disabled current file context](./images/new-disabled-current-context.png?raw=true "disabled current file context") 
+![disable current file context](./images/new-disable-current-file-context.png?raw=true "disable current file context") 
+
+![disabled current file context](./images/new-disabled-current-file-context.png?raw=true "disabled current file context") 
 
 9. Click on the *paper clip* icon and select the *test-prime.py* file from the dialog that pops up to add the entire file as context. Afterwards, the chat window should look like the second screenshot below.
 
