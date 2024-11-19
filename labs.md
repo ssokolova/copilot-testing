@@ -350,6 +350,8 @@ refactor the code in #file:webscraper.py to make it more easily testable
 
 **Purpose: In this lab, we'll see how to leverage Copilot with testing frameworks and how to do Test-Driven Development with it.**
 
+**Important Note: If any steps in this lab run with /tests by default, run them again using the "run without" option**
+
 1. Let's look at a TDD approach of creating the test cases with a failing test and then immplementing the code to be tested. Consider a simple example where we want to create a test class and tests for students at a university. We'll use Mockito in our testing framework. Let's have Copilot create a pom.xml file for us with a mockito dependency. In the separate chat interface, enter the following prompt:
 
 ```
@@ -367,25 +369,24 @@ add a pom.xml file with a mockito dependency version 3.3.3, and compiler source 
 3. Now, let's create an appropriate test class and initial set of tests. Do this in the Copilot separate Chat interface, since we expect a significant amount of output and we may want to put it in a separate file. We'll use a prompt that tells Copilot to focus on the *pom.xml* file we just created.
 
 ```
-(In the separate chat interface)
 Referencing #file:pom.xml, create a StudentTest class for students enrolled at a university and add tests
 ```
 
-4. The suggested StudentTest class from this prompt is likely overkill for what we want for a simple test case for a *Student* class. However, Copilot will likely detect that we need the Junit dependency at the start of the output. There will likely be a step or segment of code to *update pom.xml with JUnit dependencies* at the top or bottom of the output. So let's go ahead and add that part only into our *pom.xml* file. (You can just have the **corresponding section** of the pom.xml file contents highlighted and then *Insert At Cursor* to replace it.) Save the changes to the *pom.xml* file afterwards.
+4. The suggested StudentTest class from this prompt is likely overkill for what we want for a simple test case for a *Student* class. However, Copilot will likely detect that we need the Junit dependency at the start of the output. There will likely be a step or segment of code to *update pom.xml with JUnit dependencies* at the top or bottom of the output. So let's go ahead and add that part only into our *pom.xml* file. (You can just have the **corresponding section** of the pom.xml file contents highlighted and then *Apply* to replace it.) Save the changes to the *pom.xml* file afterwards.
 
-![add junit dependency](./images/ct30.png?raw=true "add junit dependency")  
+![add junit dependency](./images/new-update-pom-2.png?raw=true "add junit dependency")  
    
 5. Let's restructure the prompt to ask for something more specific for the StudentTest class. Enter the following in chat.
 
 ```
-(In the separate chat interface)
 Referencing #file:pom.xml, create only a StudentTest class for a student enrolled at a university. A student will have personal attributes such as a first and last name, a phone number, an address, and a contact email. The StudentTest class should be part of a com.example package.
 ```
 ![more specific query to create tests](./images/ct21.png?raw=true "more specific query to create tests")  
 
 6. The output from Copilot now likely looks more like what we wanted as a starting point. Click into the output for the *StudentTest* class, hover over the top right, and use the icon (or copy and paste) to put it in a different file. Save the file as **src/test/java/com/example/StudentTest.java**.
 
-![save new test](./images/ct31.png?raw=true "save new test")
+![save new test](./images/save-into-file-studenttest.png?raw=true "save new test")
+![save new test](./images/save-into-file-path.png?raw=true "save new test")
 
 7. Now, let's execute Maven to try the testing. (Note: We expect it to fail because we don't have the *Student* class implemented yet.)
 
@@ -399,7 +400,6 @@ mvn test
 8. Folllowing the TDD methodology, let's next create the minimum code to make this test pass. We can use Copilot for that. Make sure the *StudentTest.java* file is open in the editor, and then use this prompt to create the code.
 
 ```
-(in the separate Chat interface)
 Referencing #editor, create a student class with verbose comments.
 ```
 
@@ -407,7 +407,7 @@ Referencing #editor, create a student class with verbose comments.
 
 9. As we did before, hover over the output, insert the code into a new file. Then save it as **src/main/java/com/example/Student.java**
 
-![saving student file](./images/ct36.png?raw=true "saving student file")
+![saving student file](./images/new-save-into-file-student.png?raw=true "saving student file")
 
 10. Finally, let's run the test again and it should pass. 
 
