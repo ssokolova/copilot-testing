@@ -385,8 +385,8 @@ Referencing #file:pom.xml, create only a StudentTest class for a student enrolle
 
 6. The output from Copilot now likely looks more like what we wanted as a starting point. Click into the output for the *StudentTest* class, hover over the top right, and use the icon (or copy and paste) to put it in a different file. Save the file as **src/test/java/com/example/StudentTest.java**.
 
-![save new test](./images/save-into-file-studenttest.png?raw=true "save new test")
-![save new test](./images/save-into-file-path.png?raw=true "save new test")
+![save new test](./images/new-save-into-file-studenttest.png?raw=true "save new test")
+![save new test](./images/new-save-into-file-path.png?raw=true "save new test")
 
 7. Now, let's execute Maven to try the testing. (Note: We expect it to fail because we don't have the *Student* class implemented yet.)
 
