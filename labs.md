@@ -23,7 +23,7 @@ code prime.py
 3. After running the command, Copilot generates some basic assert-based tests in a new file. You can just save this file as *test_prime.py*. To do this, click on the *3-bar* menu in the upper left corner of the codespace, then click *File*, then *Save As* (or use the menu shortcut). Reply yes to the dialog asking about saving AI-generated results.
    
 ![proposed tests into new file](./images/new-slash-tests-output.png?raw=true "proposed tests into new file")
-![saving file](./images/new-slash-tests-save-output-as-new-file.png?raw=true "saving file")
+![saving file](./images/new-save-test_prime.png?raw=true "saving file")
 
    
 4. We can also get the same results from invoking the *Generate Tests* entry from the context menu. Try that now by going back to the *prime.py* file highlighting the code, right-clicking on it, then selecting *Copilot* and then *Generate Tests*. Since we already have tests generated from the other command, you can just close this dialog. (Note: If you don't see any tests generated this way, try closing the test-prime.py file and run again.)
