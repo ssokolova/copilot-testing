@@ -390,7 +390,7 @@ add a pom.xml file with a mockito dependency version 3.3.3, and compiler source 
 Referencing #file:pom.xml, create a StudentTest class for students enrolled at a university and add tests
 ```
 
-4. The suggested StudentTest class from this prompt is likely overkill for what we want for a simple test case for a *Student* class. However, Copilot will likely detect that we need the Junit dependency at the start of the output. There will likely be a step or segment of code to *update pom.xml with JUnit dependencies* at the top or bottom of the output. So let's go ahead and add that part only into our *pom.xml* file. (You can just have the **corresponding section** of the pom.xml file contents highlighted and then *Apply* to replace it.) Save the changes to the *pom.xml* file afterwards.
+4. The suggested StudentTest class from this prompt is likely overkill for what we want for a simple test case for a *Student* class. However, Copilot will likely detect that we need the Junit dependency at the start of the output. There may be a step or segment of code to *update pom.xml with JUnit dependencies* at the top or bottom of the output. If so, go ahead and add that part only into your *pom.xml* file. (You can just have the **corresponding section** of the pom.xml file contents highlighted and then *Apply* to replace it.) Save the changes to the *pom.xml* file afterwards.
 
 ![add junit dependency](./images/new-update-pom-2.png?raw=true "add junit dependency")  
    
