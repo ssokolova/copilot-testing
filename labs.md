@@ -294,26 +294,30 @@ create functional documentation for the #file:webscraper.py
 generate asserts to ensure that the inputs to the function are valid
 ```
 
-2. From here, Copilot should respond and suggest asserts, as requested, to validate the functions inputs. The response may look something like the following (again you do not have to change anything).
+2. Click on the "rerun without" link next to the "Workspace" section to get a run more targeted towards what we want.
 
-![validating inputs with asserts](./images/new-generate-asserts-to-ensure-that-inputs-to-function-are-valid.png?raw=true "validating inputs with asserts")   
+![rerun without](./images/new-rerun-without.png?raw=true "rerun without")
 
-3. We can also be more directive and tell Copilot to generate checks within our *is_prime* function for valid inputs. Try this prompt (again in the Chat interface):
+3. From here, Copilot should respond and suggest asserts, as requested, to validate the functions inputs. The response may look something like the following (again you do not have to change anything).
+
+![validating inputs with asserts](./images/new-inputs-asserts.png?raw=true "validating inputs with asserts")   
+
+4. We can also be more directive and tell Copilot to generate checks within our *is_prime* function for valid inputs. Try this prompt (again in the Chat interface):
 
 ```
 generate checks inline with the is_prime function to ensure that the inputs to the is_prime function are valid and raise an error if they are not
 ```
 
-4. This should allow Copilot to generate code to validate the inputs, but with a more standard coding mechanism to surface any issues. Here's what example output from that might look like.
+5. This should allow Copilot to generate code to validate the inputs, but with a more standard coding mechanism to surface any issues. Here's what example output from that might look like.
 
 ![validating inputs with checks](./images/new-generate-checks-to-ensure-that-inputs-to-function-are-valid.png?raw=true "validating inputs with checks")  
 
 
-5. When you're happy with this code, you can go ahead and replace the highlighted code in the file by hovering over the code in the chat, clicking the apply button and then accepting the change in the file itself (click on *Accept Changes* above the updated code). 
+6. When you're happy with this code, you can go ahead and replace the highlighted code in the file by hovering over the code in the chat, clicking the apply button and then accepting the change in the file itself (click on *Accept Changes* above the updated code). 
 
 ![validating inputs with checks](./images/new-update-is-prime-with-checks-and-accept.png?raw=true "validating inputs with checks")  
 
-6. While we are discussing inputs, we should also consider other types of inputs to test for. Switch back to the *test_prime.py* file with the test cases and have it open in the editor. Before we prompt Copilot about additional test cases, we need to be sure that it is considering the whole file for context. Even though it shows *test-prime.py* as the current file context in the chat, it will only include the part of the file that's visible in the editor.  To see that, enter this prompt and note what reference it used.
+7. While we are discussing inputs, we should also consider other types of inputs to test for. Switch back to the *test_prime.py* file with the test cases and have it open in the editor. Before we prompt Copilot about additional test cases, we need to be sure that it is considering the whole file for context. Even though it shows *test-prime.py* as the current file context in the chat, it will only include the part of the file that's visible in the editor.  To see that, enter this prompt and note what reference it used.
 
 ```
 What other kinds of test cases should we check for?
