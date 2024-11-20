@@ -147,22 +147,22 @@ Are there any other edge cases that should be tested?
 
 **Purpose: In this lab, we'll see how to leverage some of Copilot's other features to help with testing**
 
-1. Let's see how the Copilot Fix functionality can help us out. Click on/open the *test-prime.py* file from the earlier labs. At the top, let's change the first line from *import unittest* to *import pytest* as if we wanted to use the other framework.
+1. Let's see how the Copilot Fix functionality can help us out. Click on/open the *test_prime.py* file from the earlier labs. At the top, let's change the first line from *import unittest* to *import pytest* as if we wanted to use the other framework.
 ```
 import pytest
 ```
 
 2. Since the rest of the file is expecting *unittest* as the framework, we have some problems now in the file. In fact, if you look at the **PROBLEMS** tab at the bottom of the codespace, you can see that it flags two instances in the file where *unittest* is undefined.
 
-![new problems](./images/new-problems-introduced-for-fix-in-test-prime.png?raw=true "new problems")
+![new problems](./images/new-problems-in-test_prime.png?raw=true "new problems")
 
 3. We know what the fix is, but let's see if Copilot can help identify and correct the issue for us. Select/highlight all the code
    
-![copilot fix](./images/new-copilot-fix-from-menu.png?raw=true "Copilot fix")
+![copilot fix](./images/new-copilot-fix.png?raw=true "Copilot fix")
 
 4. Copilot should recognize that this is the wrong import and then suggest a correction/fix that you can then *Accept* from the dialog. After Accepting, you should see the set of problems for that file disappear from the PROBLEMS tab.
 
-![copilot fix](./images/new-suggested-fix.png?raw=true "Copilot fix")
+![copilot fix](./images/new-copilot-fix-to-accept.png?raw=true "Copilot fix")
 
 
 5. Next, let's try out the Copilot */tests* shortcut command with a different kind of file and language. There's a large demo file of SQL statements in this project named [**create-tables.sql**](./create-tables.sql). Open that.
@@ -191,7 +191,7 @@ code create-tables.sql
 
 ![view in chat](./images/new-view-in-chat.png?raw=true "view in chat")   
 
-9. While we're at it, let's have Copilot explain how the testing file it created for us works. Start a *new* chat. In the chat interface - enter *@workspace /explain # and pause. There should then be a popup, where you can use the arrow key to arrow down and select the *#file* entry and hit Enter. 
+9. While we're at it, let's have Copilot explain how the testing file it created for us works. Start a *new* chat. In the chat interface - enter *@workspace /explain #* and pause. There should then be a popup, where you can use the arrow key to arrow down and select the *#file* entry and hit Enter. 
 
 ```
 @workspace /explain #
@@ -241,7 +241,7 @@ verbosely comment all the code so it's easy to understand
 
 ![verbose doc prompt](./images/new-verbosely-comment-code.png?raw=true "verbose doc prompt")
 
-4. Hit Enter and you should more thorough comments suggested throughout the code body. You can go ahead and *Accept* them.
+4. Hit Enter and you should see more thorough comments suggested throughout the code body. You can go ahead and *Accept* them. (You may need to do multiple *Accepts*.)
 
 ![verbose doc suggestions](./images/new-code-with-verbose-comments.png?raw=true "verbose doc suggestions")
 
