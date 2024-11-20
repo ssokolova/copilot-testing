@@ -1,2 +1,5 @@
 fastapi[all]
 flask
+aiohttp
+bs4
+requests
