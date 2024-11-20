@@ -96,6 +96,8 @@ How can I test #file:webscraper.py?
 
 ![insert into new file](./images/new-test-output-to-file.png?raw=true "insert into new file")
 
+![save new file](./images/new-save-test_webscraper.png?raw=true "save new file")
+
 6. Let's also look at how we can add code coverage information for the file. Select the *webscraper.py* file in the editor. Then, switch to the separate chat dialog. To keep things clean, let's start a new chat. Click on the "+" sign in the upper right to start a new chat and type the question in there. After you hit Enter, you should see some info from Copilot on how to do coverage.
 
 ![start new chat](./images/new-new-chat.png?raw=true "start new chat")  
