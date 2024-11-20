@@ -5,3 +5,5 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
+
+# Create a set of 10 unit tests for the code above
