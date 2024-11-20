@@ -15,22 +15,25 @@
 code prime.py
 ```
 
-2. Let's see how to use the shortcut command */tests* to generate some tests. In the same prime.py file, highlight the code and use the *CMD+I* shortcut to bring up the inline chat dialog. In the text entry box for the dialog, enter the */tests* command and click on the arrow on the right at the end to submit it.
+2. First, let's see how to use the context menu to generate some tests. Highlight the code in the *prime.py* file, right-click on it, then select *Copilot* and then *Generate Tests*. After a moment, Copilot should generate some basic tests in another temporary file to the right.
+
+![using the context menu to gen tests](./images/new-tests-context-menu.png?raw=true "using the context menu to gen tests")
+
+3. You can scroll down and look at the output. We're going to use the shortcut command to generate the final file we want. So, just click on the *Discard* button and then click at the top to close the proposed *test_prime.py* file. We don't need to save it.
+
+![discard suggested tests](./images/new-discard-and-close-suggested-tests.png?raw=true "discard suggested tests")
+
+4. Now, let's use the shortcut command */tests* to generate some tests. In the same prime.py file, highlight the code and use the *CMD+I* shortcut to bring up the inline chat dialog. In the text entry box for the dialog, enter the */tests* command and click on the arrow on the right at the end to submit it.
 
 ![using the shortcut command to gen tests](./images/new-slash-tests-command.png?raw=true "using the shortcut command to gen tests")
 
-
-3. After running the command, Copilot generates some basic assert-based tests in a new file. You can just save this file as *test_prime.py*. To do this, click on the *3-bar* menu in the upper left corner of the codespace, then click *File*, then *Save As* (or use the menu shortcut). Reply yes to the dialog asking about saving AI-generated results.
+5. After running the command, Copilot generates some basic assert-based tests in a new file. You can just save this file as *test_prime.py*. To do this, click on the *3-bar* menu in the upper left corner of the codespace, then click *File*, then *Save As* (or use the menu shortcut). Reply yes to the dialog asking about saving AI-generated results.
    
 ![proposed tests into new file](./images/new-slash-tests-output.png?raw=true "proposed tests into new file")
 ![saving file](./images/new-save-test_prime.png?raw=true "saving file")
 
-   
-4. We can also get the same results from invoking the *Generate Tests* entry from the context menu. Try that now by going back to the *prime.py* file highlighting the code, right-clicking on it, then selecting *Copilot* and then *Generate Tests*. Since we already have tests generated from the other command, you can just close this dialog. (Note: If you don't see any tests generated this way, try closing the test-prime.py file and run again.)
-   
-![proposed tests from the menu](./images/new-tests-generated-from-menu.png?raw=true "proposed tests from the menu")
 
-5. We can also use comments to have Copilot create tests. Let's try this in the original *prime.py* file. Under the code, add a comment line that tells Copilot to create tests for the code above.
+6. We can also use comments to have Copilot create tests. Let's try this in the original *prime.py* file. Under the code, add a comment line that tells Copilot to create tests for the code above.
 
 ```
 # Create tests for the code above
@@ -38,7 +41,7 @@ code prime.py
 
 ![tests from comments](./images/ct74.png?raw=true "tests from comments")
 
-6. Hit return (if you haven't). Copilot may supply a generic testing routine, such as below, the start of a routine, or a set of actual assert-based tests (NOTE: if you only get the first line, you may need to "nudge" Copilot by typing "result" or similar after accepting the first line):
+7. Hit return (if you haven't). Copilot may supply a generic testing routine, such as below, the start of a routine, or a set of actual assert-based tests (NOTE: if you only get the first line, you may need to "nudge" Copilot by typing "result" or similar after accepting the first line):
 
 ```
 def test_is_prime(number, expected):
@@ -47,13 +50,13 @@ def test_is_prime(number, expected):
 {result}"
 ```
 
-7. Depending on your particular comment and context, Copilot may produce a more generic testing function or a set of individual test cases. To ensure you get the latter,  delete the generated code from the previous comment and redo the steps with this comment. (You may need to hit return again and give Copilot a few seconds to generate the tests.)
+8. Depending on your particular comment and context, Copilot may produce a more generic testing function or a set of individual test cases. To ensure you get the latter,  delete the generated code from the previous comment and redo the steps with this comment. (You may need to hit return again and give Copilot a few seconds to generate the tests.)
 
 ```
 # Create a set of 10 unit tests for the code above
 ```
 
-8. In this case, Copilot will usually generate a more explicit set of tests wrapped in a testing function. An example is shown next.
+9. In this case, Copilot will usually generate a more explicit set of tests wrapped in a testing function. An example is shown next.
 
 ![test by comment](./images/ct14.png?raw=true "test by comment")    
 
