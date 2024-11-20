@@ -98,24 +98,33 @@ How can I test #file:webscraper.py?
 
 ![save new file](./images/new-save-test_webscraper.png?raw=true "save new file")
 
-6. Let's also look at how we can add code coverage information for the file. Select the *webscraper.py* file in the editor. Then, switch to the separate chat dialog. To keep things clean, let's start a new chat. Click on the "+" sign in the upper right to start a new chat and type the question in there. After you hit Enter, you should see some info from Copilot on how to do coverage.
+6. Let's also look at how we can add code coverage information for the *webscraper.py* file. Switch to the separate chat dialog. To keep things clean, let's start a new chat. Also, let's remove the default context in the chat. Click on the icon next to the test_webscraper.py file to delete it. 
 
 ![start new chat](./images/new-new-chat.png?raw=true "start new chat")  
+![delete default context](./images/new-delete-default-context.png?raw=true "delete default context")
 
+7. Now, let's add the *webscraper.py* file as our context. In the chat input area, click on the icon that looks like a paperclip. Then in the list of options that pops up in top center, select the *webscraper.py* file. After that, it should show up in the context of the chat.
+
+![add context](./images/new-add-context.png?raw=true "add context") 
+![add context](./images/new-choose-webscraper.png?raw=true "add context") 
+![updated context](./images/new-updated-context.png?raw=true "updated context") 
+
+8. Now, let's ask Copilot how we can measure code coverage on the file?
 ```
 How can I measure code coverage on this file?
 ```
 
 ![query on code coverage](./images/new-code-coverage.png?raw=true "query on code coverage")
 
-7. In the chat output, you'll see a set of commands that can be run from the command line. You can hover over each and click the icon that looks like a terminal to send these commands directly to the terminal. (If you don't see a group, you can still hover over the individual commands, and insert them one at a time into the terminal via the popup terminal icon.)
-
+9. In the chat output, you'll see a set of steps interspersed with commands that can be run from the command line. 
+   
 ![query on code coverage](./images/new-hover-and-insert-into-terminal.png?raw=true "query on code coverage")
 
-9. When you click on that terminal icon, it should populate the terminal with those commands and you can run them. The code is not currently setup for coverage, so that won't run.
-![coverage results](./images/ct78.png?raw=true "coverage results")
+10. You can hover over each and click the icon that looks like a terminal to send these commands directly to the terminal. Try this with the one for "pip install coverage". When you click on that terminal icon, it should populate the terminal with that command and you can run it.
+    
+![insert command from chat to terminal](./images/new-command-from-chat-to-terminal.png?raw=true "insert command from chat to terminal")
 
-10. Finally, let's have Copilot help us identify any other edge cases that we should consider. Switch back to the *test-prime.py* file, highlight the text, and start a new chat. Then, in the Chat interface, enter the prompt "Are there any other edge cases that should be tested?".
+11. Finally, let's have Copilot help us identify any other edge cases that we should consider. Switch back to the *test-prime.py* file, highlight the text, and start a new chat. Then, in the Chat interface, enter the prompt "Are there any other edge cases that should be tested?".
 
 ```
 Are there any other edge cases that should be tested?
@@ -123,7 +132,7 @@ Are there any other edge cases that should be tested?
 
 ![finding other test cases](./images/new-edge-cases-to-apply.png?raw=true "Finding other test cases")
 
-11. This should result in some additional test cases being generated in Chat that you can then just replace in the *test_prime.py* file by using the *Apply in Editor* icon that shows up when you hover over the code and then clicking on the *Accept changes* link above the code change.
+12. This should result in some additional test cases being generated in Chat that you can then just replace in the *test_prime.py* file by using the *Apply in Editor* icon that shows up when you hover over the code and then clicking on the *Accept changes* link above the code change.
 
 ![adding test cases](./images/new-apply-edge-cases.png?raw=true "Adding test cases")
 
