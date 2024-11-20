@@ -92,7 +92,7 @@ How can I test #file:webscraper.py?
    
 ![apply edits](./images/new-click-to-apply-edits.png?raw=true "apply edits")
 
-5. After this, you should see the testing code as a new file named *test_webscraper.py* in your editor. **Save the file as test_webscraper.py to make sure it has the correct name.**
+5. After this, you should see the testing code as a new file in your editor. **Save the file as test_webscraper.py to make sure it has the correct name.**
 
 ![insert into new file](./images/new-test-output-to-file.png?raw=true "insert into new file")
 
