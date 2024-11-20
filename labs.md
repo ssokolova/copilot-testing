@@ -41,7 +41,7 @@ code prime.py
 
 ![tests from comments](./images/ct74.png?raw=true "tests from comments")
 
-7. Hit return (if you haven't). Copilot may supply a generic testing routine, such as below, the start of a routine, or a set of actual assert-based tests (NOTE: if you only get the first line, you may need to "nudge" Copilot by typing "result" or similar after accepting the first line):
+7. Hit return (if you haven't). Copilot may supply a generic testing routine, such as below, the start of a routine, or a set of actual assert-based tests (NOTE: if you only get a blank line at first, try hitting return again to see if it starts filling in the function on the second line):
 
 ```
 def test_is_prime(number, expected):
@@ -56,7 +56,7 @@ def test_is_prime(number, expected):
 # Create a set of 10 unit tests for the code above
 ```
 
-9. In this case, Copilot will usually generate a more explicit set of tests wrapped in a testing function. An example is shown next.
+9. In this case, Copilot will usually generate a more explicit set of tests wrapped in a testing function. An example is shown next.You can delete them after looking at them since we already have other tests.
 
 ![test by comment](./images/ct14.png?raw=true "test by comment")    
 
